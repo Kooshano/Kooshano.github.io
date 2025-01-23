@@ -3,332 +3,327 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kooshan Maleki - Resume</title>
-  <style>
-    /* Basic Resets and Simple Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #333;
-      background-color: #f8f8f8;
-    }
-    
-    header {
-      background-color: #1E90FF;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-    }
-    
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    
-    header h2 {
-      margin-top: 0.5rem;
-      font-weight: normal;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      background-color: #fff;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-
-    .personal-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin: 1rem 0;
-      padding: 1rem;
-      background-color: #f0f7ff;
-      border-left: 4px solid #1E90FF;
-    }
-
-    .personal-info div {
-      flex: 1 1 250px;
-    }
-    
-    h3.section-title {
-      background-color: #0B3D91;
-      color: #fff;
-      padding: 0.5rem;
-      margin: 0;
-      margin-top: 1rem;
-      font-size: 1.5rem;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-    
-    .item-title {
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    .item-subtitle {
-      color: #666;
-      font-style: italic;
-      margin-bottom: 0.3rem;
-    }
-
-    ul {
-      margin: 0.5rem 0 1rem 1.5rem;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
-    }
-
-    .divider {
-      height: 1px;
-      background-color: #ccc;
-      margin: 1rem 0;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #aaa;
-      padding: 1rem;
-    }
-  </style>
+  <title>Kooshan Maleki - CV</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Optional: Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Lato:wght@300;400;700&display=swap" 
+    rel="stylesheet"
+  />
 </head>
 <body>
 
-  <!-- Header with Name and Tagline -->
-  <header>
-    <h1>Kooshan Maleki</h1>
-    <h2>Senior Student in Computer Engineering</h2>
+  <!-- ====== HEADER / INTRO SECTION ====== -->
+  <header class="header">
+    <div class="header-content">
+      <div class="photo-container">
+        <!-- Replace with your own photo (ensure the path is correct) -->
+        <img src="images/profile_photo.jpg" alt="Kooshan Maleki" class="profile-photo" />
+      </div>
+      <div class="intro-text">
+        <h1 class="name">Kooshan Maleki</h1>
+        <h2 class="tagline">Senior Student in Computer Engineering</h2>
+        <div class="contact-info">
+          <p><strong>Email:</strong> 
+            <a href="mailto:Kooshan.mk@aut.ac.ir">Kooshan.mk@aut.ac.ir</a>
+          </p>
+          <p><strong>Phone:</strong> 
+            <a href="tel:+989380203648">+98 938 020 3648</a>
+          </p>
+          <p><strong>Location:</strong> Tehran, Iran</p>
+          <p><strong>Twitter:</strong> 
+            <a href="https://twitter.com/Kooshano" target="_blank">@Kooshano</a>
+          </p>
+          <p><strong>LinkedIn:</strong> 
+            <a href="https://www.linkedin.com/in/Kooshan-Maleki" target="_blank">Kooshan-Maleki</a>
+          </p>
+          <p><strong>GitHub:</strong> 
+            <a href="https://github.com/Kooshano" target="_blank">Kooshano</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <!-- Main Container -->
-  <div class="container">
-    
-    <!-- Personal Information Section -->
-    <div class="personal-info">
-      <div><strong>Email:</strong> Kooshan.mk@aut.ac.ir</div>
-      <div><strong>Phone:</strong> +98 938 020 3648</div>
-      <div><strong>Location:</strong> Tehran, Iran</div>
-      <div><strong>Twitter:</strong> @Kooshano</div>
-      <div><strong>LinkedIn:</strong> Kooshan-Maleki</div>
-      <div><strong>GitHub:</strong> Kooshano</div>
-    </div>
+  <hr class="divider" />
 
-    <!-- Education -->
-    <section>
-      <h3 class="section-title">Education</h3>
-
-      <div>
-        <p class="item-title">B.Sc. in Computer Engineering</p>
-        <p class="item-subtitle">Amirkabir University of Technology (AUT), Tehran, Iran (2021 -- Present)</p>
-        <ul>
-          <li>GPA: 19.00/20, ranked 4th among 100+ students.</li>
-          <li>Relevant coursework: Quantum Computing, Machine Learning, Computer Vision, Advanced Algorithms</li>
-        </ul>
+  <!-- ====== MAIN CONTENT WRAPPER ====== -->
+  <main class="main-content">
+    <!-- ====== EDUCATION SECTION ====== -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="item">
+        <h3>B.Sc. in Computer Engineering</h3>
+        <p><strong>Institution:</strong> Amirkabir University of Technology (2021 – Present), Tehran, Iran</p>
+        <p><strong>GPA:</strong> 19.00/20, ranked 4<sup>th</sup> among over 100 students.</p>
       </div>
+      <div class="item">
+        <h3>Diploma</h3>
+        <p><strong>Institution:</strong> Allameh Helli High School (NODET) (2017 – 2021), Tehran, Iran</p>
+        <p><strong>GPA:</strong> 19.40/20</p>
+      </div>
+    </section>
 
-      <div class="divider"></div>
+    <hr class="divider" />
 
-      <div>
-        <p class="item-title">Diploma</p>
-        <p class="item-subtitle">Allameh Helli High School (NODET), Tehran, Iran (2017 -- 2021)</p>
+    <!-- ====== RESEARCH EXPERIENCE ====== -->
+    <section id="research">
+      <h2>Research Experience</h2>
+      
+      <div class="accordion">
+        <button class="accordion-btn">
+          Quantum Algorithms for Robotic Motion Planning (Nov 2024 – Present)
+        </button>
+        <div class="accordion-content">
+          <p>
+            <strong>Advisors:</strong> 
+            Prof. Farrokh Janabi-Sharif (Toronto Metropolitan University), 
+            Prof. Negar Ashari (Amirkabir University of Technology)
+          </p>
+          <ul>
+            <li>Investigating quantum algorithms (HHL) to enhance robotic pathfinding and decision-making.</li>
+            <li>Implementing quantum phase estimation & Hamiltonian simulation for navigation.</li>
+            <li>Analyzing scalability and efficiency in dynamic, complex environments.</li>
+            <li>Exploring hybrid quantum-classical approaches for real-time applications.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ====== INDUSTRIAL EXPERIENCE ====== -->
+    <section id="experience">
+      <h2>Industrial Experience</h2>
+      <div class="item">
+        <h3>AI Vision Developer, SIMUT (June 2024 – Present)</h3>
+        <p><strong>Website:</strong> 
+          <a href="https://mfp.co.ir" target="_blank">https://mfp.co.ir</a>
+        </p>
         <ul>
-          <li>GPA: 19.40/20</li>
+          <li>Developed a machine vision system for analyzing heart ultrasound images using OpenCV and ML.</li>
+          <li>Collaborated with Shahid Rajaei Hospital to collect real-world medical data.</li>
+          <li>Built interactive UIs with PySide6 & Matplotlib, visualizing ultrasound data.</li>
+          <li>Localized cardiac ultrasound equipment to reduce reliance on foreign tech.</li>
+          <li>Implemented advanced image processing for heart muscle strain and EF measurement.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Research Experience -->
-    <section>
-      <h3 class="section-title">Research Experience</h3>
+    <hr class="divider" />
 
-      <div>
-        <p class="item-title">Undergraduate Researcher: Quantum Algorithms for Robotic Planning</p>
-        <p class="item-subtitle">Nov 2024 -- Present</p>
-        <ul>
-          <li>Investigating quantum algorithms to enhance robotic motion planning, optimizing pathfinding and decision-making under uncertainty.</li>
-          <li>Exploring scalability and efficiency in quantum-inspired solutions for complex, dynamic robotic environments.</li>
-        </ul>
+    <!-- ====== SELECTED PROJECTS ====== -->
+    <section id="projects">
+      <h2>Selected Projects</h2>
+
+      <!-- Quantum Machine Learning -->
+      <div class="accordion">
+        <button class="accordion-btn">
+          Quantum Machine Learning (2024)
+        </button>
+        <div class="accordion-content">
+          <ul>
+            <li>Developed hybrid quantum-classical models using Qiskit (variational algorithms).</li>
+            <li>Implemented amplitude encoding (Motonen's) for representing classical data in quantum states.</li>
+            <li>Leveraged QFT and IQFT for improved feature extraction and data analysis.</li>
+            <li>Benchmarked quantum-enhanced vs. classical performance, highlighting potential speedups.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Kolmogorov-Arnold Neural Networks -->
+      <div class="accordion">
+        <button class="accordion-btn">
+          Kolmogorov-Arnold Neural Networks (2024)
+        </button>
+        <div class="accordion-content">
+          <p>
+            <strong>GitHub:</strong> 
+            <a href="https://github.com/Kooshano/KAN" target="_blank">
+              Kolmogorov-Arnold Neural Networks Repo
+            </a>
+          </p>
+          <ul>
+            <li>Implemented a neural network from scratch, using spline interpolation for enhanced performance.</li>
+            <li>Developed custom activation functions and backpropagation algorithms.</li>
+            <li>Reduced oscillations and improved training stability with spline-based gradient updates.</li>
+            <li>Extensively tested on diverse datasets, documented the design and findings.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- Industrial Experience -->
-    <section>
-      <h3 class="section-title">Industrial Experience</h3>
+    <hr class="divider" />
 
-      <div>
-        <p class="item-title">AI Vision and Software Developer, SIMUT</p>
-        <p class="item-subtitle">Tehran, Iran (June 2024 -- Present) <a href="https://mfp.co.ir" target="_blank">(mfp.co.ir)</a></p>
+    <!-- ====== TEACHING EXPERIENCE ====== -->
+    <section id="teaching">
+      <h2>Teaching Experience</h2>
+      <div class="item">
+        <h3>Teaching Assistant, Amirkabir University of Technology (2021 – Present)</h3>
         <ul>
-          <li>Developed a machine vision system to analyze cardiac ultrasound images, improving measurement accuracy for clinical diagnostics.</li>
-          <li>Implemented speckle tracking and image segmentation algorithms to aid cardiologists at Shahid Rajaei Hospital.</li>
-          <li>Improved the localization of cardiac ultrasound equipment by leveraging AI-driven solutions.</li>
+          <li>Special Topics in Quantum Computing (Grad, Head TA) – Spring 2025</li>
+          <li>Microprocessors and Assembly (Head TA) – Spring 2025</li>
+          <li>Computer Networks – Fall 2024, Spring 2025</li>
+          <li>Applied Linear Algebra – Fall 2024</li>
+          <li>Computer Architecture – Spring 2024, Spring 2025</li>
+          <li>Algorithm Design – Spring 2023</li>
+          <li>Logic Circuits – Spring 2023</li>
         </ul>
+      </div>
+
+      <div class="item">
+        <h3>Physics Instructor, Allameh Helli High School (2021 – 2023)</h3>
+        <p>Trained students for the Iranian Physics Olympiad, focusing on deep conceptual understanding.</p>
       </div>
     </section>
 
-    <!-- Selected Projects -->
-    <section>
-      <h3 class="section-title">Selected Projects</h3>
+    <hr class="divider" />
 
-      <div>
-        <p class="item-title">Quantum Machine Learning for Classification</p>
-        <p class="item-subtitle">Amirkabir University of Technology, 2024</p>
-        <ul>
-          <li>Integrated Qiskit and TensorFlow Quantum to build hybrid quantum-classical classifiers.</li>
-          <li>Evaluated potential performance benefits of quantum-enhanced models over purely classical approaches.</li>
-        </ul>
+    <!-- ====== CERTIFICATIONS SECTION ====== -->
+    <section id="certifications">
+      <h2>Certifications and Specialized Courses</h2>
+      
+      <div class="accordion">
+        <button class="accordion-btn">
+          QubitXQubit Quantum Computing Course (2023 – 2024)
+        </button>
+        <div class="accordion-content">
+          <p><strong>Institution:</strong> The Coding School</p>
+          <ul>
+            <li>Studied quantum computing fundamentals: qubits, superposition, entanglement.</li>
+            <li>Implemented Deutsch-Jozsa algorithm on quantum simulators.</li>
+          </ul>
+          <p>
+            <!-- Example certificate image thumbnail -->
+            <a href="images/QxQ Certificate-Maleki Dizadji-Kooshan.pdf" target="_blank">
+              <img 
+                src="images/QxQ Certificate-Maleki Dizadji-Kooshan.pdf" 
+                alt="QubitXQubit Certificate" 
+                class="cert-thumbnail"
+              />
+            </a>
+          </p>
+        </div>
       </div>
 
-      <div class="divider"></div>
-
-      <div>
-        <p class="item-title">Kolmogorov-Arnold Neural Network (KAN) from Scratch</p>
-        <p class="item-subtitle">Personal Project, 2024</p>
-        <ul>
-          <li>Implemented a neural network from basic principles (backpropagation, custom activation functions).</li>
-          <li>Employed spline interpolation to improve convergence and benchmarked performance against standard ML libraries.</li>
-        </ul>
+      <div class="accordion">
+        <button class="accordion-btn">
+          Supervised Machine Learning (2022)
+        </button>
+        <div class="accordion-content">
+          <p><strong>Institution:</strong> Stanford University (Coursera)</p>
+          <ul>
+            <li>Covered regression, classification, and regularization techniques.</li>
+            <li>Hands-on projects using Scikit-Learn.</li>
+          </ul>
+          <p>
+            <strong>Certificate:</strong>
+            <a href="images/supervised_ml_certificate.jpg" target="_blank">
+              <img 
+                src="images/supervised_ml_certificate.jpg" 
+                alt="Supervised ML Certificate" 
+                class="cert-thumbnail"
+              />
+            </a>
+          </p>
+        </div>
       </div>
 
-      <div class="divider"></div>
-
-      <div>
-        <p class="item-title">Animal Detection using CNNs</p>
-        <p class="item-subtitle">Personal Project, 2023</p>
-        <ul>
-          <li>Built and trained CNN models (TensorFlow, Keras) for robust image recognition tasks.</li>
-          <li>Achieved high classification accuracy via data augmentation and transfer learning.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Teaching Experience -->
-    <section>
-      <h3 class="section-title">Teaching Experience</h3>
-
-      <div>
-        <p class="item-title">Teaching Assistant</p>
-        <p class="item-subtitle">Amirkabir University of Technology (2021 -- Present)</p>
-        <ul>
-          <li>Computer Networks under supervision of Dr. Sabaei (Fall 2024)</li>
-          <li>Applied Linear Algebra under supervision of Dr. Nazerfard (Fall 2024)</li>
-          <li>Computer Architecture under supervision of Dr. Zarandi (Spring 2024)</li>
-          <li>Algorithm Design under supervision of Dr. Dolati Malekabad (Spring 2023)</li>
-          <li>Logic Circuits under supervision of Dr. Sedighi, Dr. Saheb Zamani (Spring 2023)</li>
-        </ul>
-      </div>
-
-      <div class="divider"></div>
-
-      <div>
-        <p class="item-title">Physics Instructor</p>
-        <p class="item-subtitle">Allameh Helli High School, Tehran, Iran (2021 -- 2023)</p>
-        <ul>
-          <li>Prepared students for the Iranian Physics Olympiad, focusing on deep conceptual understanding and problem-solving.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Certifications and Specialized Courses -->
-    <section>
-      <h3 class="section-title">Certifications & Specialized Courses</h3>
-
-      <div>
-        <p class="item-title">QubitXQubit Quantum Computing Course</p>
-        <p class="item-subtitle">The Coding School, 2023 -- 2024</p>
-        <ul>
-          <li>Acquired foundational quantum computing concepts and implemented basic quantum algorithms.</li>
-        </ul>
-      </div>
-
-      <div class="divider"></div>
-
-      <div>
-        <p class="item-title">Special Topics in Quantum Computing</p>
-        <p class="item-subtitle">Amirkabir University of Technology, 2023</p>
-        <ul>
-          <li>Focused on advanced quantum algorithms.</li>
-        </ul>
-      </div>
-
-      <div class="divider"></div>
-
-      <div>
-        <p class="item-title">Machine Learning using Quantum Computers</p>
-        <p class="item-subtitle">Amirkabir University of Technology, 2023</p>
-        <ul>
-          <li>Explored hybrid quantum-classical models for machine learning tasks.</li>
-        </ul>
-      </div>
-
-      <div class="divider"></div>
-
-      <div>
-        <p class="item-title">Supervised Machine Learning (Coursera)</p>
-        <p class="item-subtitle">Stanford University, 2022</p>
-      </div>
-
-      <div class="divider"></div>
-
-      <div>
-        <p class="item-title">Neural Networks & Deep Learning (Coursera)</p>
-        <p class="item-subtitle">Stanford University, 2022</p>
+      <div class="accordion">
+        <button class="accordion-btn">
+          Neural Networks & Deep Learning (2022)
+        </button>
+        <div class="accordion-content">
+          <p><strong>Institution:</strong> Stanford University (Coursera)</p>
+          <ul>
+            <li>Learned neural network architectures and deep learning optimization techniques.</li>
+            <li>Implemented models with TensorFlow & Keras for classification tasks.</li>
+          </ul>
+          <p>
+            <strong>Certificate:</strong>
+            <a href="images/nn_dl_certificate.jpg" target="_blank">
+              <img 
+                src="images/nn_dl_certificate.jpg" 
+                alt="NN & DL Certificate" 
+                class="cert-thumbnail"
+              />
+            </a>
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Honors & Awards -->
-    <section>
-      <h3 class="section-title">Honors & Awards</h3>
+    <hr class="divider" />
+
+    <!-- ====== HONORS AND AWARDS ====== -->
+    <section id="awards">
+      <h2>Honors and Awards</h2>
       <ul>
-        <li>Top 1% in the Iranian National University Entrance Exam (2021).</li>
-        <li>Awarded QubitXQubit course scholarship (MIT/Stanford-level instruction).</li>
-        <li>Participant in the 32nd Physics Olympiad of Iran.</li>
-        <li>Winner, 2017 SamCode Programming Competition in Data Analysis (among 200 NODET students).</li>
+        <li>Top 1% in the Iranian Universities Entrance Exam (2021)</li>
+        <li>QubitXQubit course scholarship (MIT & Stanford Ph.D.)</li>
+        <li>Attended the 32nd Physics Olympiad of Iran</li>
+        <li>Winner of the 2017 SamCode Programming Competition in Data Analysis</li>
       </ul>
     </section>
 
-    <!-- Skills -->
-    <section>
-      <h3 class="section-title">Skills</h3>
+    <hr class="divider" />
+
+    <!-- ====== SKILLS AND COMPETENCIES ====== -->
+    <section id="skills">
+      <h2>Skills and Competencies</h2>
       <ul>
-        <li><strong>Programming:</strong> Python, C++, Java, C, Verilog, VHDL</li>
-        <li><strong>AI/ML Frameworks:</strong> TensorFlow, PyTorch, Scikit-Learn</li>
-        <li><strong>Quantum Tools:</strong> Qiskit, Cirq, TensorFlow Quantum</li>
-        <li><strong>Computer Vision:</strong> OpenCV, Image Segmentation, Feature Extraction</li>
-        <li><strong>Tools:</strong> Git, Docker, PySide6, NumPy, Pandas, Matplotlib</li>
+        <li>
+          <strong>Programming Languages:</strong> Python, Java, C, C++, Verilog, VHDL
+        </li>
+        <li>
+          <strong>Libraries/Frameworks:</strong> PyTorch, TensorFlow, NumPy, Pandas, PyGame, Cirq, Qiskit, Qiskit Aer, Scikit-Learn
+        </li>
+        <li>
+          <strong>Tools/Platforms:</strong> GitHub, PySide6, OpenCV, Matplotlib, Kubernetes, Docker
+        </li>
       </ul>
     </section>
 
-    <!-- Languages -->
-    <section>
-      <h3 class="section-title">Languages</h3>
+    <hr class="divider" />
+
+    <!-- ====== LANGUAGES SECTION ====== -->
+    <section id="languages">
+      <h2>Languages</h2>
       <ul>
-        <li><strong>English:</strong> Fluent (TOEFL 106)</li>
+        <li>
+          <strong>English:</strong> Fluent (TOEFL 106) 
+          <!-- Link to TOEFL PDF -->
+          <a href="images/TOEFL_Score_Report_0662195.pdf" target="_blank">View Score Report (PDF)</a>
+        </li>
         <li><strong>Persian:</strong> Native</li>
       </ul>
     </section>
 
-    <!-- Hobbies & Interests -->
-    <section>
-      <h3 class="section-title">Hobbies & Interests</h3>
+    <hr class="divider" />
+
+    <!-- ====== HOBBIES & INTERESTS ====== -->
+    <section id="hobbies">
+      <h2>Hobbies and Interests</h2>
       <ul>
-        <li><strong>Hiking, Tennis:</strong> Fosters resilience, mental acuity, and physical well-being.</li>
-        <li><strong>Cooking:</strong> Certified in cooking; enjoys exploring new recipes, reflecting creativity and attention to detail.</li>
+        <li><strong>Hiking:</strong> Enjoy exploring nature</li>
+        <li><strong>Tennis:</strong> Amateur tournaments, tennis certified</li>
+        <li><strong>Cooking:</strong> Passion for culinary arts, experimenting with new recipes</li>
+        <li><strong>Video Games:</strong> Strategy & adventure genres</li>
       </ul>
     </section>
+  </main>
 
-  </div>
+  <hr class="divider" />
 
-  <footer>
-    &copy; 2025 Kooshan Maleki. All rights reserved.
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <p>© 2025 Kooshan Maleki | Built with HTML, CSS, and JavaScript</p>
   </footer>
+
+  <!-- Link to JS -->
+  <script src="script.js"></script>
 </body>
 </html>

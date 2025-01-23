@@ -1,0 +1,151 @@
+/* ====== Global Styles ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 0.5rem;
+    color: #0B3D91;
+  }
+  
+  /* ====== Header ====== */
+  .header {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .header-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  
+  .photo-container {
+    margin-right: 1.5rem;
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .intro-text .name {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    color: #000;
+  }
+  
+  .intro-text .tagline {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #0B3D91;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info a {
+    text-decoration: none;
+    color: #1E90FF;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ====== Sections & Dividers ====== */
+  .main-content {
+    margin-bottom: 2rem;
+  }
+  
+  section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .item {
+    margin-bottom: 1rem;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+  }
+  
+  /* ====== Footer ====== */
+  .footer {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* ====== Accordion Styles ====== */
+  .accordion {
+    margin-bottom: 1rem;
+  }
+  
+  .accordion-btn {
+    background-color: #0B3D91;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    outline: none; 
+  }
+  
+  .accordion-btn:hover {
+    background-color: #1E90FF;
+  }
+  
+  /* Collapsible content is hidden by default */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1rem; 
+    background-color: #f9f9f9;
+  }
+  
+  /* Optional style for text within the accordion content */
+  .accordion-content p, 
+  .accordion-content ul {
+    margin: 0.75rem 0;
+  }
+  
+  /* Optional: if you want the button to visually change when active */
+  .accordion-btn.active {
+    background-color: #1E90FF;
+  }
+  
+  /* ====== Certificate Thumbnail Images ====== */
+  .cert-thumbnail {
+    width: 100px;
+    height: auto;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .cert-thumbnail:hover {
+    border-color: #1E90FF;
+  }
