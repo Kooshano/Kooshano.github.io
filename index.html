@@ -20,7 +20,7 @@
   <header class="header">
     <div class="header-content">
       <div class="photo-container">
-        <!-- Replace with your own photo (ensure the path is correct) -->
+        <!-- Replace with your own photo (make sure images/profile_photo.jpg exists) -->
         <img src="images/profile_photo.jpg" alt="Kooshan Maleki" class="profile-photo" />
       </div>
       <div class="intro-text">
@@ -69,18 +69,16 @@
 
     <hr class="divider" />
 
-    <!-- ====== RESEARCH EXPERIENCE ====== -->
+    <!-- ====== RESEARCH EXPERIENCE (Accordion) ====== -->
     <section id="research">
       <h2>Research Experience</h2>
-      
       <div class="accordion">
         <button class="accordion-btn">
           Quantum Algorithms for Robotic Motion Planning (Nov 2024 – Present)
         </button>
         <div class="accordion-content">
           <p>
-            <strong>Advisors:</strong> 
-            Prof. Farrokh Janabi-Sharif (Toronto Metropolitan University), 
+            <strong>Advisors:</strong> Prof. Farrokh Janabi-Sharif (Toronto Metropolitan University), 
             Prof. Negar Ashari (Amirkabir University of Technology)
           </p>
           <ul>
@@ -95,50 +93,48 @@
 
     <hr class="divider" />
 
-    <!-- ====== INDUSTRIAL EXPERIENCE ====== -->
+    <!-- ====== INDUSTRIAL EXPERIENCE (Accordion) ====== -->
     <section id="experience">
       <h2>Industrial Experience</h2>
-      <div class="item">
-        <h3>AI Vision Developer, SIMUT (June 2024 – Present)</h3>
-        <p><strong>Website:</strong> 
-          <a href="https://mfp.co.ir" target="_blank">https://mfp.co.ir</a>
-        </p>
-        <ul>
-          <li>Developed a machine vision system for analyzing heart ultrasound images using OpenCV and ML.</li>
-          <li>Collaborated with Shahid Rajaei Hospital to collect real-world medical data.</li>
-          <li>Built interactive UIs with PySide6 & Matplotlib, visualizing ultrasound data.</li>
-          <li>Localized cardiac ultrasound equipment to reduce reliance on foreign tech.</li>
-          <li>Implemented advanced image processing for heart muscle strain and EF measurement.</li>
-        </ul>
+      <div class="accordion">
+        <button class="accordion-btn">
+          AI Vision Developer, SIMUT (June 2024 – Present)
+        </button>
+        <div class="accordion-content">
+          <p><strong>Website:</strong> 
+            <a href="https://mfp.co.ir" target="_blank">https://mfp.co.ir</a>
+          </p>
+          <ul>
+            <li>Developed a machine vision system for analyzing heart ultrasound images using OpenCV and ML.</li>
+            <li>Collaborated with Shahid Rajaei Hospital to collect real-world medical data.</li>
+            <li>Built interactive UIs with PySide6 & Matplotlib, visualizing ultrasound data.</li>
+            <li>Localized cardiac ultrasound equipment to reduce reliance on foreign tech.</li>
+            <li>Implemented advanced image processing for heart muscle strain and EF measurement.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <hr class="divider" />
 
-    <!-- ====== SELECTED PROJECTS ====== -->
+    <!-- ====== SELECTED PROJECTS (Accordion) ====== -->
     <section id="projects">
       <h2>Selected Projects</h2>
 
-      <!-- Quantum Machine Learning -->
       <div class="accordion">
-        <button class="accordion-btn">
-          Quantum Machine Learning (2024)
-        </button>
+        <button class="accordion-btn">Quantum Machine Learning (2024)</button>
         <div class="accordion-content">
           <ul>
             <li>Developed hybrid quantum-classical models using Qiskit (variational algorithms).</li>
             <li>Implemented amplitude encoding (Motonen's) for representing classical data in quantum states.</li>
-            <li>Leveraged QFT and IQFT for improved feature extraction and data analysis.</li>
-            <li>Benchmarked quantum-enhanced vs. classical performance, highlighting potential speedups.</li>
+            <li>Leveraged QFT and IQFT for enhanced feature extraction and data analysis.</li>
+            <li>Compared quantum-enhanced vs. classical approaches, highlighting potential speedups.</li>
           </ul>
         </div>
       </div>
 
-      <!-- Kolmogorov-Arnold Neural Networks -->
       <div class="accordion">
-        <button class="accordion-btn">
-          Kolmogorov-Arnold Neural Networks (2024)
-        </button>
+        <button class="accordion-btn">Kolmogorov-Arnold Neural Networks (2024)</button>
         <div class="accordion-content">
           <p>
             <strong>GitHub:</strong> 
@@ -150,7 +146,7 @@
             <li>Implemented a neural network from scratch, using spline interpolation for enhanced performance.</li>
             <li>Developed custom activation functions and backpropagation algorithms.</li>
             <li>Reduced oscillations and improved training stability with spline-based gradient updates.</li>
-            <li>Extensively tested on diverse datasets, documented the design and findings.</li>
+            <li>Extensively tested on diverse datasets, documenting design and findings.</li>
           </ul>
         </div>
       </div>
@@ -158,32 +154,39 @@
 
     <hr class="divider" />
 
-    <!-- ====== TEACHING EXPERIENCE ====== -->
+    <!-- ====== TEACHING EXPERIENCE (Accordion) ====== -->
     <section id="teaching">
       <h2>Teaching Experience</h2>
-      <div class="item">
-        <h3>Teaching Assistant, Amirkabir University of Technology (2021 – Present)</h3>
-        <ul>
-          <li>Special Topics in Quantum Computing (Grad, Head TA) – Spring 2025</li>
-          <li>Microprocessors and Assembly (Head TA) – Spring 2025</li>
-          <li>Computer Networks – Fall 2024, Spring 2025</li>
-          <li>Applied Linear Algebra – Fall 2024</li>
-          <li>Computer Architecture – Spring 2024, Spring 2025</li>
-          <li>Algorithm Design – Spring 2023</li>
-          <li>Logic Circuits – Spring 2023</li>
-        </ul>
+
+      <div class="accordion">
+        <button class="accordion-btn">
+          Teaching Assistant, Amirkabir University of Technology (2021 – Present)
+        </button>
+        <div class="accordion-content">
+          <ul>
+            <li>Special Topics in Quantum Computing (Grad, Head TA) – Spring 2025</li>
+            <li>Microprocessors and Assembly (Head TA) – Spring 2025</li>
+            <li>Computer Networks – Fall 2024, Spring 2025</li>
+            <li>Applied Linear Algebra – Fall 2024</li>
+            <li>Computer Architecture – Spring 2024, Spring 2025</li>
+            <li>Algorithm Design – Spring 2023</li>
+            <li>Logic Circuits – Spring 2023</li>
+          </ul>
+        </div>
       </div>
 
-      <div class="item">
-        <h3>Physics Instructor, Allameh Helli High School (2021 – 2023)</h3>
-        <p>Trained students for the Iranian Physics Olympiad, focusing on deep conceptual understanding.</p>
+      <div class="accordion">
+        <button class="accordion-btn">Physics Instructor, Allameh Helli High School (2021 – 2023)</button>
+        <div class="accordion-content">
+          <p>Trained students for the Iranian Physics Olympiad, focusing on deep conceptual understanding.</p>
+        </div>
       </div>
     </section>
 
     <hr class="divider" />
 
-    <!-- ====== CERTIFICATIONS SECTION ====== -->
-    <section id="certifications">
+     <!-- ====== CERTIFICATIONS SECTION ====== -->
+     <section id="certifications">
       <h2>Certifications and Specialized Courses</h2>
       
       <div class="accordion">
@@ -210,17 +213,11 @@
       </div>
 
       <div class="accordion">
-        <button class="accordion-btn">
-          Supervised Machine Learning (2022)
-        </button>
+        <button class="accordion-btn">Supervised Machine Learning (2022)</button>
         <div class="accordion-content">
-          <p><strong>Institution:</strong> Stanford University (Coursera)</p>
-          <ul>
-            <li>Covered regression, classification, and regularization techniques.</li>
-            <li>Hands-on projects using Scikit-Learn.</li>
-          </ul>
-          <p>
+          <div class="certificate-center">
             <strong>Certificate:</strong>
+            <!-- Make sure images/supervised_ml_certificate.jpg exists -->
             <a href="images/supervised_ml_certificate.jpg" target="_blank">
               <img 
                 src="images/supervised_ml_certificate.jpg" 
@@ -228,22 +225,21 @@
                 class="cert-thumbnail"
               />
             </a>
-          </p>
+          </div>
+          <p><strong>Institution:</strong> Stanford University (Coursera)</p>
+          <ul>
+            <li>Focus on regression, classification, and regularization techniques.</li>
+            <li>Hands-on projects using Scikit-Learn for model building.</li>
+          </ul>
         </div>
       </div>
 
       <div class="accordion">
-        <button class="accordion-btn">
-          Neural Networks & Deep Learning (2022)
-        </button>
+        <button class="accordion-btn">Neural Networks & Deep Learning (2022)</button>
         <div class="accordion-content">
-          <p><strong>Institution:</strong> Stanford University (Coursera)</p>
-          <ul>
-            <li>Learned neural network architectures and deep learning optimization techniques.</li>
-            <li>Implemented models with TensorFlow & Keras for classification tasks.</li>
-          </ul>
-          <p>
+          <div class="certificate-center">
             <strong>Certificate:</strong>
+            <!-- Make sure images/nn_dl_certificate.jpg exists -->
             <a href="images/nn_dl_certificate.jpg" target="_blank">
               <img 
                 src="images/nn_dl_certificate.jpg" 
@@ -251,7 +247,12 @@
                 class="cert-thumbnail"
               />
             </a>
-          </p>
+          </div>
+          <p><strong>Institution:</strong> Stanford University (Coursera)</p>
+          <ul>
+            <li>Mastered neural network architectures and deep learning optimization.</li>
+            <li>Built models using TensorFlow & Keras for classification tasks.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -295,8 +296,8 @@
       <ul>
         <li>
           <strong>English:</strong> Fluent (TOEFL 106) 
-          <!-- Link to TOEFL PDF -->
-          <a href="images/TOEFL_Score_Report_0662195.pdf" target="_blank">View Score Report (PDF)</a>
+          <!-- Link to your TOEFL PDF -->
+          <a href="images/toefl_score.pdf" target="_blank">View Score Report (PDF)</a>
         </li>
         <li><strong>Persian:</strong> Native</li>
       </ul>
