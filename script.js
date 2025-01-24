@@ -85,7 +85,7 @@ const modalOverlay = document.getElementById('modalOverlay');
 const modalBody = document.getElementById('modalBody');
 const modalCloseBtn = document.getElementById('modalClose');
 
-// Capture clicks on .cert-thumbnail to open modal with PDF or enlarged image
+// Capture clicks on .cert-thumbnail to open modal
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('cert-thumbnail')) {
     const fullPath = e.target.getAttribute('data-full');
@@ -94,7 +94,7 @@ document.addEventListener('click', (e) => {
     // Clear previous content
     modalBody.innerHTML = '';
 
-    // Check extension
+    // Check if it's a PDF (ends with .pdf) or an image
     const isPDF = fullPath.toLowerCase().endsWith('.pdf');
 
     if (isPDF) {
@@ -124,7 +124,7 @@ modalCloseBtn.addEventListener('click', () => {
   modalOverlay.style.display = 'none';
 });
 
-// Close modal on clicking outside content
+// Close modal on clicking outside the modal content
 modalOverlay.addEventListener('click', (e) => {
   if (e.target === modalOverlay) {
     modalOverlay.style.display = 'none';

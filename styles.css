@@ -220,6 +220,25 @@ p {
   padding-left: 8px;
 }
 
+/* ===== course-list for Teaching Experience ===== */
+.course-list {
+  list-style: none;       /* remove bullets */
+  padding-left: 0;
+  margin: 0;
+}
+.course-list li {
+  display: flex;
+  justify-content: space-between; /* left name, right term */
+  margin-bottom: 5px;
+}
+.course-name {
+  flex: 1;
+}
+.course-term {
+  margin-left: 10px;
+  white-space: nowrap; /* keeps the date from wrapping */
+}
+
 /* ===== Certificates Preview Images ===== */
 .certificate-preview {
   margin-top: 15px;
@@ -276,22 +295,4 @@ footer p {
 }
 .modal-close:hover {
   color: #999;
-}
-/* ===== Teaching Experience Two-Column Layout ===== */
-.course-list {
-  list-style: none;       /* remove default bullets */
-  padding-left: 0;        /* remove extra padding */
-  margin: 0;              /* remove default margin */
-}
-.course-list li {
-  display: flex;          /* two columns */
-  justify-content: space-between; /* push them to the edges */
-  margin-bottom: 5px;     /* small gap between lines */
-}
-.course-name {
-  flex: 1;                /* left column takes available space */
-}
-.course-term {
-  margin-left: 10px;      /* some spacing before the term */
-  white-space: nowrap;    /* keep the date on one line */
 }
