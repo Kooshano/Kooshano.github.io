@@ -2,74 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kooshan Maleki - CV</title>
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- Optional: Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <title>Kooshan Maleki</title>
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon/Icon (optional) -->
+  <link rel="icon" sizes="32x32" href="static/icon.png">
+
+  <!-- Font Awesome + Academicons for icons -->
   <link 
-    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Lato:wght@300;400;700&display=swap" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
     rel="stylesheet"
-  />
+  >
+  <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css"
+  >
 </head>
 <body>
+  <div class="container">
+    <!-- ===== Header ===== -->
+    <header>
+      <h1 class="title">Kooshan Maleki</h1>
+      <img src="static/logo.svg" alt="Icon" class="header-icon">
+    </header>
 
-  <!-- ====== HEADER / INTRO SECTION ====== -->
-  <header class="header">
-    <div class="header-content">
-      <div class="photo-container">
-        <!-- Replace with your own photo (make sure images/profile_photo.jpg exists) -->
-        <img src="images/profile_photo.jpg" alt="Kooshan Maleki" class="profile-photo" />
-      </div>
-      <div class="intro-text">
-        <h1 class="name">Kooshan Maleki</h1>
-        <h2 class="tagline">Senior Student in Computer Engineering</h2>
-        <div class="contact-info">
-          <p><strong>Email:</strong> 
-            <a href="mailto:Kooshan.mk@aut.ac.ir">Kooshan.mk@aut.ac.ir</a>
-          </p>
-          <p><strong>Phone:</strong> 
-            <a href="tel:+989380203648">+98 938 020 3648</a>
+    <!-- ===== Intro Section ===== -->
+    <section id="intro">
+      <div class="section-content">
+        <div class="profile-photo">
+          <img src="static/profile_photo.jpg" alt="Profile Photo">
+        </div>
+        <div class="text-content">
+          <p>
+            Hello! I’m <strong>Kooshan Maleki</strong>, a senior undergraduate student in
+            <strong>Computer Engineering</strong> at
+            <a href="https://aut.ac.ir" target="_blank" rel="noopener">
+            Amirkabir University of Technology</a>. 
+            I’m deeply passionate about weaving together <em>quantum computing</em>, 
+            <em>machine learning</em>, and <em>robotics</em> to tackle real-world challenges from 
+            building more efficient autonomous systems to enhancing medical diagnostics with advanced 
+            algorithms. I love discovering new ways to bridge theory and practice, collaborating across 
+            disciplines, and pushing the boundaries of what emerging technologies can achieve.
           </p>
           <p><strong>Location:</strong> Tehran, Iran</p>
-          <p><strong>Twitter:</strong> 
-            <a href="https://twitter.com/Kooshano" target="_blank">@Kooshano</a>
-          </p>
-          <p><strong>LinkedIn:</strong> 
-            <a href="https://www.linkedin.com/in/Kooshan-Maleki" target="_blank">Kooshan-Maleki</a>
-          </p>
-          <p><strong>GitHub:</strong> 
-            <a href="https://github.com/Kooshano" target="_blank">Kooshano</a>
-          </p>
+
+          <div class="profile-icons">
+            <a href="mailto:Kooshan.mk@aut.ac.ir" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://scholar.google.com" title="Google Scholar">
+              <i class="ai ai-google-scholar-square"></i>
+            </a>
+            <a href="https://github.com/Kooshano" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/Kooshan-Maleki" 
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/Kooshano" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="static/CV.pdf" title="CV">
+              <i class="ai ai-cv"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </section>
 
-  <hr class="divider" />
-
-  <!-- ====== MAIN CONTENT WRAPPER ====== -->
-  <main class="main-content">
-    <!-- ====== EDUCATION SECTION ====== -->
+    <!-- ===== Education Section ===== -->
     <section id="education">
       <h2>Education</h2>
       <div class="item">
         <h3>B.Sc. in Computer Engineering</h3>
-        <p><strong>Institution:</strong> Amirkabir University of Technology (2021 – Present), Tehran, Iran</p>
+        <p><strong>Institution:</strong> Amirkabir University of Technology (2021 – Present)</p>
         <p><strong>GPA:</strong> 19.00/20, ranked 4<sup>th</sup> among over 100 students.</p>
       </div>
       <div class="item">
         <h3>Diploma</h3>
-        <p><strong>Institution:</strong> Allameh Helli High School (NODET) (2017 – 2021), Tehran, Iran</p>
+        <p><strong>Institution:</strong> Allameh Helli High School (NODET) (2017 – 2021)</p>
         <p><strong>GPA:</strong> 19.40/20</p>
       </div>
     </section>
 
-    <hr class="divider" />
-
-    <!-- ====== RESEARCH EXPERIENCE (Accordion) ====== -->
+    <!-- ===== Research Experience (Accordion) ===== -->
     <section id="research">
       <h2>Research Experience</h2>
       <div class="accordion">
@@ -83,7 +104,7 @@
           </p>
           <ul>
             <li>Investigating quantum algorithms (HHL) to enhance robotic pathfinding and decision-making.</li>
-            <li>Implementing quantum phase estimation & Hamiltonian simulation for navigation.</li>
+            <li>Implementing quantum phase estimation &amp; Hamiltonian simulation for navigation.</li>
             <li>Analyzing scalability and efficiency in dynamic, complex environments.</li>
             <li>Exploring hybrid quantum-classical approaches for real-time applications.</li>
           </ul>
@@ -91,9 +112,7 @@
       </div>
     </section>
 
-    <hr class="divider" />
-
-    <!-- ====== INDUSTRIAL EXPERIENCE (Accordion) ====== -->
+    <!-- ===== Industrial Experience (Accordion) ===== -->
     <section id="experience">
       <h2>Industrial Experience</h2>
       <div class="accordion">
@@ -105,73 +124,135 @@
             <a href="https://mfp.co.ir" target="_blank">https://mfp.co.ir</a>
           </p>
           <ul>
-            <li>Developed a machine vision system for analyzing heart ultrasound images using OpenCV and ML.</li>
-            <li>Collaborated with Shahid Rajaei Hospital to collect real-world medical data.</li>
-            <li>Built interactive UIs with PySide6 & Matplotlib, visualizing ultrasound data.</li>
-            <li>Localized cardiac ultrasound equipment to reduce reliance on foreign tech.</li>
-            <li>Implemented advanced image processing for heart muscle strain and EF measurement.</li>
+            <li>Developed a machine vision system for heart ultrasound images using OpenCV and ML.</li>
+            <li>Collaborated with Shahid Rajaei Hospital to gather real-world medical data.</li>
+            <li>Built interactive UIs with PySide6 &amp; Matplotlib, visualizing ultrasound data.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <hr class="divider" />
-
-    <!-- ====== SELECTED PROJECTS (Accordion) ====== -->
+    <!-- ===== Selected Projects (same style as Publications) ===== -->
     <section id="projects">
       <h2>Selected Projects</h2>
+      <ul class="publication-list">
 
-      <div class="accordion">
-        <button class="accordion-btn">Quantum Machine Learning (2024)</button>
-        <div class="accordion-content">
-          <ul>
-            <li>Developed hybrid quantum-classical models using Qiskit (variational algorithms).</li>
-            <li>Implemented amplitude encoding (Motonen's) for representing classical data in quantum states.</li>
-            <li>Leveraged QFT and IQFT for enhanced feature extraction and data analysis.</li>
-            <li>Compared quantum-enhanced vs. classical approaches, highlighting potential speedups.</li>
-          </ul>
-        </div>
-      </div>
+        <!-- Project #1: Quantum Machine Learning -->
+        <li class="publication-item">
+          <div class="publication-content">
+            <div class="publication-thumbnail">
+              <img 
+                src="static/HHL.png" 
+                alt="Quantum Machine Learning" 
+                class="pull-figure"
+              >
+            </div>
+            <div class="publication-details">
+              <h3 class="publication-title">Quantum Machine Learning (2024)</h3>
+              <div class="publication-info">
+                <p class="publication-authors">Personal Project</p>
+                <p class="publication-conference">
+                  Explored hybrid quantum-classical models using Qiskit (variational algorithms), 
+                  amplitude encoding, QFT, and IQFT for data analysis.
+                </p>
+                <p class="publication-links">
+                  <a 
+                    href="https://github.com/Kooshano/SomeQuantumRepo" 
+                    class="link-button github-link"
+                  >
+                    <span class="link-icon"><i class="fab fa-github"></i></span>
+                    <span>Repo</span>
+                    <span class="star-span">
+                      <i class="fa-regular fa-star"></i>
+                      <span class="stars-count">Loading...</span>
+                    </span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
 
-      <div class="accordion">
-        <button class="accordion-btn">Kolmogorov-Arnold Neural Networks (2024)</button>
-        <div class="accordion-content">
-          <p>
-            <strong>GitHub:</strong> 
-            <a href="https://github.com/Kooshano/KAN" target="_blank">
-              Kolmogorov-Arnold Neural Networks Repo
-            </a>
-          </p>
-          <ul>
-            <li>Implemented a neural network from scratch, using spline interpolation for enhanced performance.</li>
-            <li>Developed custom activation functions and backpropagation algorithms.</li>
-            <li>Reduced oscillations and improved training stability with spline-based gradient updates.</li>
-            <li>Extensively tested on diverse datasets, documenting design and findings.</li>
-          </ul>
-        </div>
-      </div>
+        <!-- Project #2: Kolmogorov-Arnold Neural Networks (KAN) -->
+        <li class="publication-item">
+          <div class="publication-content">
+            <div class="publication-thumbnail">
+              <img 
+                src="static/KAN.png" 
+                alt="Kolmogorov-Arnold Neural Networks" 
+                class="pull-figure"
+              >
+            </div>
+            <div class="publication-details">
+              <h3 class="publication-title">Kolmogorov-Arnold Neural Networks (2024)</h3>
+              <div class="publication-info">
+                <p class="publication-authors">Personal Project</p>
+                <p class="publication-conference">
+                  Implemented from scratch with spline interpolation, custom activations, and backprop;
+                  tested on diverse datasets.
+                </p>
+                <p class="publication-links">
+                  <a 
+                    href="https://github.com/Kooshano/KAN" 
+                    class="link-button github-link"
+                  >
+                    <span class="link-icon"><i class="fab fa-github"></i></span>
+                    <span>Repo</span>
+                    <span class="star-span">
+                      <i class="fa-regular fa-star"></i>
+                      <span class="stars-count">Loading...</span>
+                    </span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- Add more projects if needed -->
+      </ul>
     </section>
 
-    <hr class="divider" />
-
-    <!-- ====== TEACHING EXPERIENCE (Accordion) ====== -->
+    <!-- ===== Teaching Experience (Accordion) ===== -->
     <section id="teaching">
       <h2>Teaching Experience</h2>
-
       <div class="accordion">
         <button class="accordion-btn">
           Teaching Assistant, Amirkabir University of Technology (2021 – Present)
         </button>
         <div class="accordion-content">
-          <ul>
-            <li>Special Topics in Quantum Computing (Grad, Head TA) – Spring 2025</li>
-            <li>Microprocessors and Assembly (Head TA) – Spring 2025</li>
-            <li>Computer Networks – Fall 2024, Spring 2025</li>
-            <li>Applied Linear Algebra – Fall 2024</li>
-            <li>Computer Architecture – Spring 2024, Spring 2025</li>
-            <li>Algorithm Design – Spring 2023</li>
-            <li>Logic Circuits – Spring 2023</li>
+    
+          <!-- New "course-list" with two columns -->
+          <ul class="course-list">
+            <li>
+              <span class="course-name">Special Topics in Quantum Computing (Grad, Head TA)</span>
+              <span class="course-term">Spring 2025</span>
+            </li>
+            <li>
+              <span class="course-name">Microprocessors and Assembly (Head TA)</span>
+              <span class="course-term">Spring 2025</span>
+            </li>
+            <li>
+              <span class="course-name">Computer Networks</span>
+              <span class="course-term">Fall 2024, Spring 2025</span>
+            </li>
+            <li>
+              <span class="course-name">Applied Linear Algebra</span>
+              <span class="course-term">Fall 2024</span>
+            </li>
+            <li>
+              <span class="course-name">Computer Architecture</span>
+              <span class="course-term">Spring 2024, Spring 2025</span>
+            </li>
+            <li>
+              <span class="course-name">Algorithm Design</span>
+              <span class="course-term">Spring 2023</span>
+            </li>
+            <li>
+              <span class="course-name">Logic Circuits</span>
+              <span class="course-term">Spring 2023</span>
+            </li>
           </ul>
+    
         </div>
       </div>
 
@@ -183,12 +264,11 @@
       </div>
     </section>
 
-    <hr class="divider" />
-
-     <!-- ====== CERTIFICATIONS SECTION ====== -->
-     <section id="certifications">
+    <!-- ===== Certifications Section (Accordion) with Preview Images ===== -->
+    <section id="certifications">
       <h2>Certifications and Specialized Courses</h2>
-      
+
+      <!-- QubitXQubit -->
       <div class="accordion">
         <button class="accordion-btn">
           QubitXQubit Quantum Computing Course (2023 – 2024)
@@ -199,80 +279,74 @@
             <li>Studied quantum computing fundamentals: qubits, superposition, entanglement.</li>
             <li>Implemented Deutsch-Jozsa algorithm on quantum simulators.</li>
           </ul>
-          <p>
-            <!-- Example certificate image thumbnail -->
-            <a href="images/QxQ Certificate-Maleki Dizadji-Kooshan.pdf" target="_blank">
-              <img 
-                src="images/QxQ Certificate-Maleki Dizadji-Kooshan.pdf" 
-                alt="QubitXQubit Certificate" 
-                class="cert-thumbnail"
-              />
-            </a>
-          </p>
+          <div class="certificate-preview">
+            <!-- data-full -> The FULL PDF or image for the modal -->
+            <img 
+              src="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg" 
+              alt="QubitXQubit Certificate Preview" 
+              class="cert-thumbnail"
+              data-full="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg"
+            >
+            <p><em>Click image to open inline PDF</em></p>
+          </div>
         </div>
       </div>
 
+      <!-- Supervised Machine Learning -->
       <div class="accordion">
         <button class="accordion-btn">Supervised Machine Learning (2022)</button>
         <div class="accordion-content">
-          <div class="certificate-center">
-            <strong>Certificate:</strong>
-            <!-- Make sure images/supervised_ml_certificate.jpg exists -->
-            <a href="images/supervised_ml_certificate.jpg" target="_blank">
-              <img 
-                src="images/supervised_ml_certificate.jpg" 
-                alt="Supervised ML Certificate" 
-                class="cert-thumbnail"
-              />
-            </a>
-          </div>
           <p><strong>Institution:</strong> Stanford University (Coursera)</p>
           <ul>
-            <li>Focus on regression, classification, and regularization techniques.</li>
-            <li>Hands-on projects using Scikit-Learn for model building.</li>
+            <li>Focus on regression, classification, and regularization.</li>
+            <li>Hands-on projects with Scikit-Learn.</li>
           </ul>
+          <div class="certificate-preview">
+            <img 
+              src="static/Supervised Machine Learning- Regression and Classification.jpg" 
+              alt="Supervised ML Certificate" 
+              class="cert-thumbnail"
+              data-full="static/Supervised Machine Learning- Regression and Classification.jpg"
+            >
+            <p><em>Click image to enlarge</em></p>
+          </div>
         </div>
       </div>
 
+      <!-- Neural Networks & Deep Learning -->
       <div class="accordion">
-        <button class="accordion-btn">Neural Networks & Deep Learning (2022)</button>
+        <button class="accordion-btn">Neural Networks &amp; Deep Learning (2022)</button>
         <div class="accordion-content">
-          <div class="certificate-center">
-            <strong>Certificate:</strong>
-            <!-- Make sure images/nn_dl_certificate.jpg exists -->
-            <a href="images/nn_dl_certificate.jpg" target="_blank">
-              <img 
-                src="images/nn_dl_certificate.jpg" 
-                alt="NN & DL Certificate" 
-                class="cert-thumbnail"
-              />
-            </a>
-          </div>
           <p><strong>Institution:</strong> Stanford University (Coursera)</p>
           <ul>
             <li>Mastered neural network architectures and deep learning optimization.</li>
-            <li>Built models using TensorFlow & Keras for classification tasks.</li>
+            <li>Built models using TensorFlow &amp; Keras for classification tasks.</li>
           </ul>
+          <div class="certificate-preview">
+            <img 
+              src="static/Neural Networks and Deep Learning.jpg" 
+              alt="NN & DL Certificate" 
+              class="cert-thumbnail"
+              data-full="static/Neural Networks and Deep Learning.jpg"
+            >
+            <p><em>Click image to enlarge</em></p>
+          </div>
         </div>
       </div>
     </section>
 
-    <hr class="divider" />
-
-    <!-- ====== HONORS AND AWARDS ====== -->
+    <!-- ===== Honors and Awards ===== -->
     <section id="awards">
       <h2>Honors and Awards</h2>
       <ul>
         <li>Top 1% in the Iranian Universities Entrance Exam (2021)</li>
-        <li>QubitXQubit course scholarship (MIT & Stanford Ph.D.)</li>
+        <li>QubitXQubit course scholarship (MIT &amp; Stanford Ph.D.)</li>
         <li>Attended the 32nd Physics Olympiad of Iran</li>
         <li>Winner of the 2017 SamCode Programming Competition in Data Analysis</li>
       </ul>
     </section>
 
-    <hr class="divider" />
-
-    <!-- ====== SKILLS AND COMPETENCIES ====== -->
+    <!-- ===== Skills and Competencies ===== -->
     <section id="skills">
       <h2>Skills and Competencies</h2>
       <ul>
@@ -288,43 +362,90 @@
       </ul>
     </section>
 
-    <hr class="divider" />
-
-    <!-- ====== LANGUAGES SECTION ====== -->
+    <!-- ===== Languages (with TOEFL preview) ===== -->
     <section id="languages">
       <h2>Languages</h2>
       <ul>
-        <li>
-          <strong>English:</strong> Fluent (TOEFL 106) 
-          <!-- Link to your TOEFL PDF -->
-          <a href="images/TOEFL_Score_Report_0662195.pdf" target="_blank">View Score Report (PDF)</a>
-        </li>
         <li><strong>Persian:</strong> Native</li>
+        <li>
+          <strong>English:</strong> Fluent (TOEFL 106)
+          <div class="certificate-preview">
+            <img 
+              src="static/Toefl.png" 
+              alt="TOEFL Score Preview" 
+              class="cert-thumbnail"
+              data-full="static/Toefl.png"
+            >
+            <p><em>Click image to preview PDF</em></p>
+          </div>
+        </li>
+        
       </ul>
     </section>
 
-    <hr class="divider" />
-
-    <!-- ====== HOBBIES & INTERESTS ====== -->
-    <section id="hobbies">
-      <h2>Hobbies and Interests</h2>
-      <ul>
-        <li><strong>Hiking:</strong> Enjoy exploring nature</li>
-        <li><strong>Tennis:</strong> Amateur tournaments, tennis certified</li>
-        <li><strong>Cooking:</strong> Passion for culinary arts, experimenting with new recipes</li>
-        <li><strong>Video Games:</strong> Strategy & adventure genres</li>
+    <!-- ===== Publications & Preprints ===== -->
+    <section id="publications">
+      <h2>Publications &amp; Preprints</h2>
+      <ul class="publication-list">
+        <li class="publication-item">
+          <div class="publication-content">
+            <div class="publication-thumbnail">
+              <img 
+                src="static/thumbnails/example_fig.png" 
+                alt="Placeholder Figure" 
+                class="pull-figure"
+              >
+            </div>
+            <div class="publication-details">
+              <h3 class="publication-title">
+                Hybrid Quantum-Classical Approaches for Robotic Motion Planning
+              </h3>
+              <div class="publication-info">
+                <p class="publication-authors">
+                  <strong>Kooshan Maleki</strong>, et al.
+                </p>
+                <p class="publication-conference">
+                  <i>Quantum + AI Conference (QAI) 2025</i>
+                </p>
+                <p class="publication-links">
+                  <a href="#" class="link-button">
+                    <span class="link-icon"><i class="ai ai-arxiv"></i></span>
+                    <span>Paper</span>
+                  </a>
+                  <a 
+                    href="https://github.com/Kooshano/HQC-Robotics" 
+                    class="link-button github-link"
+                  >
+                    <span class="link-icon"><i class="fab fa-github"></i></span>
+                    <span>Code</span>
+                    <span class="star-span">
+                      <i class="fa-regular fa-star"></i>
+                      <span class="stars-count">Loading...</span>
+                    </span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
       </ul>
     </section>
-  </main>
 
-  <hr class="divider" />
+    <!-- ===== Footer ===== -->
+    <footer>
+      <p>&copy; 2025 Kooshan Maleki. All rights reserved.</p>
+    </footer>
+  </div>
 
-  <!-- ====== FOOTER ====== -->
-  <footer class="footer">
-    <p>© 2025 Kooshan Maleki | Built with HTML, CSS, and JavaScript</p>
-  </footer>
+  <!-- ===== Modal Overlay for PDF/Image Preview ===== -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
 
-  <!-- Link to JS -->
+  <!-- Main JS -->
   <script src="script.js"></script>
 </body>
 </html>

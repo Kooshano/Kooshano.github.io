@@ -1,0 +1,297 @@
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+}
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #0056b3;
+  text-decoration: none;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* ===== Title with Typing Effect ===== */
+.title {
+  text-align: left;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.title::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-icon {
+  width: 200px;
+  height: 100px;
+  margin-left: auto;
+}
+
+/* ===== Section Base ===== */
+section {
+  padding: 40px;
+  border-top: 2px solid #333; /* line on top of each section */
+  margin-bottom: 0;
+}
+section:first-of-type {
+  margin-top: 0;
+}
+h2 {
+  font-size: 24px;
+}
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 15px;
+}
+
+/* ===== Intro Section ===== */
+.section-content {
+  display: flex;
+  align-items: center;
+}
+.profile-photo {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 50px;
+  border: 2px solid #333;
+  flex-shrink: 0;
+}
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.text-content {
+  flex: 1;
+}
+
+/* Profile icons in the intro section */
+.profile-icons {
+  margin-top: 30px;
+  text-align: left;
+}
+.profile-icons a {
+  color: #333;
+  font-size: 28px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+.profile-icons a:hover {
+  color: #007BFF;
+}
+
+/* ===== Accordion Style ===== */
+.accordion {
+  margin: 20px 0;
+}
+.accordion-btn {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  font-size: 18px;
+  transition: background-color 0.4s;
+  margin-bottom: 5px;
+}
+.accordion-btn:hover {
+  background-color: #ddd;
+}
+.accordion-content {
+  display: none; /* Hidden by default */
+  padding: 0 15px;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.accordion-content ul {
+  margin-top: 0;
+  margin-bottom: 20px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+/* Show the accordion content when parent has "active" class */
+.accordion.active .accordion-content {
+  display: block;
+}
+
+/* ===== Publications (also used for Selected Projects) ===== */
+.publication-list {
+  list-style-type: none;
+  padding: 0;
+}
+.publication-item {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #333;
+}
+.publication-content {
+  display: flex;
+  align-items: flex-start;
+}
+.publication-thumbnail {
+  flex: 0 0 280px; 
+  margin-right: 15px;
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.publication-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+.publication-details {
+  flex: 1;
+}
+.publication-title {
+  font-size: 1em;
+  margin: 0;
+}
+.publication-authors {
+  font-size: 0.9em;
+}
+.publication-conference {
+  font-size: 0.9em;
+  font-style: italic;
+}
+.publication-links {
+  margin-top: 10px;
+}
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2px;
+  padding: 2px 10px;
+  background-color: #fff; 
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 50px;
+  font-size: 0.9em;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin-right: 6px;
+}
+.link-button:hover {
+  background-color: #e6e6e6;
+}
+.link-icon {
+  margin-right: 4px; 
+  width: 20px; 
+  height: 20px;
+}
+.star-span {
+  padding-left: 8px;
+}
+
+/* ===== Certificates Preview Images ===== */
+.certificate-preview {
+  margin-top: 15px;
+}
+.cert-thumbnail {
+  max-width: 200px;
+  margin-bottom: 10px;
+  display: block;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #333;
+}
+footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ===== Modal Overlay for PDF/Image ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* on top of everything */
+}
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  padding: 20px;
+  border-radius: 4px;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+.modal-close:hover {
+  color: #999;
+}
+/* ===== Teaching Experience Two-Column Layout ===== */
+.course-list {
+  list-style: none;       /* remove default bullets */
+  padding-left: 0;        /* remove extra padding */
+  margin: 0;              /* remove default margin */
+}
+.course-list li {
+  display: flex;          /* two columns */
+  justify-content: space-between; /* push them to the edges */
+  margin-bottom: 5px;     /* small gap between lines */
+}
+.course-name {
+  flex: 1;                /* left column takes available space */
+}
+.course-term {
+  margin-left: 10px;      /* some spacing before the term */
+  white-space: nowrap;    /* keep the date on one line */
+}
