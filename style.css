@@ -1,0 +1,294 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #333;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* ===== Title with Typing Effect ===== */
+.title {
+  text-align: left;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+/* Blinking cursor after the typed text */
+.title::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 3px;
+  animation: blink 0.7s infinite;
+}
+
+/* Typing & blinking animation */
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+.typing-animation {
+  animation: typing 4s steps(40) 1s 1 normal both;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 40px;
+  border-top: 2px solid #333; /* line on top of each section */
+  margin-bottom: 0;
+}
+section:first-of-type {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-icon {
+  width: 54px;
+  height: 54px;
+  margin-left: auto;
+}
+
+/* ===== Intro Section ===== */
+.section-content {
+  display: flex;
+  align-items: center;
+}
+
+.profile-photo {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 50px;
+  border: 2px solid #333;
+  flex-shrink: 0;
+}
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.text-content {
+  flex: 1;
+}
+
+/* Profile icon buttons */
+.profile-icons {
+  margin-top: 30px; 
+  text-align: center;
+}
+.profile-icons a {
+  color: #333;
+  font-size: 32px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+.profile-icons a:hover {
+  color: #007BFF;
+}
+
+/* ===== Publications Section ===== */
+.publication-list {
+  list-style-type: none;
+  padding: 0;
+}
+.publication-item {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #333;
+}
+.publication-content {
+  display: flex;
+  align-items: flex-start;
+}
+.publication-thumbnail {
+  flex: 0 0 280px; 
+  margin-right: 15px;
+  background-color: white;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.publication-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+.publication-details {
+  flex: 1;
+}
+.publication-title {
+  font-size: 1em;
+  margin: 0;
+}
+.publication-authors {
+  font-size: 0.9em;
+}
+.publication-conference {
+  font-size: 0.9em;
+  font-style: italic;
+}
+.publication-links {
+  margin-top: 10px;
+}
+.link-button {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 2px;
+  padding: 2px 10px;
+  background-color: #fff; 
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 50px;
+  font-size: 0.9em;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin-right: 6px;
+}
+.link-button:hover {
+  background-color: #e6e6e6;
+}
+.link-icon {
+  margin-right: 4px; 
+  width: 20px; 
+  height: 20px;
+}
+.star-span {
+  padding-left: 8px;
+}
+
+/* ===== Creative Coding (Projects) Section ===== */
+.project-subtitle {
+  font-size: 15px;
+  color: #888;
+  margin-left: 2px; 
+  margin-top: -15px; 
+}
+.project-list {
+  list-style-type: none;
+  padding: 0;
+}
+.project-item {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.project-title {
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
+}
+.project-link {
+  text-decoration: none;
+  color: #1573e6;
+  transition: color 0.3s ease;
+}
+.project-link:hover {
+  color: #0056b3;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #333;
+}
+footer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ===== GitHub Repo Info Containers (if used) ===== */
+.repo-info-container {
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+}
+.repo-info-container h3 {
+  font-size: 26px;
+  margin: 0;
+}
+.repo-info-container p {
+  font-size: 16px;
+  color: #586069;
+  margin: 5px 0;
+}
+.repo-info-container .description {
+  font-size: 14px;
+  margin-top: 10px;
+}
+.repo-info-container .repo-stats {
+  margin-top: 15px;
+  font-size: 14px;
+  display: flex;
+  gap: 20px;
+}
+.repo-info-container .repo-stats span {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.repo-info-container a {
+  color: #0366d6;
+  text-decoration: none;
+}
+.repo-info-container a:hover {
+  text-decoration: underline;
+}
+.repo-info-container .btn {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.repo-info-container .btn:hover {
+  background-color: #218838;
+}
+.repo-info-container .repo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
