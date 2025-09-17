@@ -1,44 +1,58 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Kooshan Maleki</title>
-  
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Favicon/Icon (optional) -->
-  <link rel="icon" sizes="32x32" href="static/logo.svg">
-
-  <!-- Font Awesome + Academicons for icons -->
-  <link 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
-    rel="stylesheet"
-  >
-  <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css"
-  >
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta charset="utf-8"/>
+<title>Kooshan Maleki</title>
+<!-- Main CSS -->
+<link href="styles.css" rel="stylesheet"/>
+<!-- Favicon/Icon (optional) -->
+<link href="static/logo.svg" rel="icon" sizes="32x32"/>
+<!-- Font Awesome + Academicons for icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="container">
-    <!-- ===== Header ===== -->
-    <header>
-      <h1 class="title">Kooshan Maleki</h1>
-      <img src="static/logo.svg" alt="Icon" class="header-icon">
-    </header>
-
-    <!-- ===== Intro Section ===== -->
-    <section id="intro">
-      <div class="section-content">
-        <div class="profile-photo">
-          <img src="static/profile.jpeg" alt="Profile Photo">
-        </div>
-        <div class="text-content">
-          <p>
+<canvas aria-hidden="true" class="quantum-canvas" id="quantumCanvas"></canvas>
+<nav class="navbar">
+<div class="nav-inner">
+<a class="brand" href="#intro">
+<img alt="Logo" class="brand-logo theme-image" data-src-dark="static/logo-dark.svg" data-src-light="static/logo-light.svg" src="static/logo-dark2.svg"/>
+</a>
+<button aria-label="Toggle navigation" class="nav-toggle">☰</button>
+<ul class="nav-links">
+<li><a class="nav-link" href="#intro">Home</a></li>
+<li><a class="nav-link" href="#education">Education</a></li>
+<li><a class="nav-link" href="#research">Research</a></li>
+<li><a class="nav-link" href="#projects">Projects</a></li>
+<li><a class="nav-link" href="#teaching">Teaching</a></li>
+<li><a class="nav-link" href="#certifications">Certifications</a></li>
+<li><a class="nav-link" href="#awards">Awards</a></li>
+<li><a class="nav-link" href="#skills">Skills</a></li>
+<li><a class="nav-link" href="#languages">Languages</a></li>
+</ul>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+</div>
+<div class="nav-underline"></div>
+</nav>
+<div class="container">
+<!-- ===== Header ===== -->
+<header>
+<h1 class="title">Kooshan Maleki</h1>
+<img alt="Logo" class="header-icon theme-image" data-src-dark="static/logo-dark.svg" data-src-light="static/logo-light.svg" src="static/logo-dark2.svg"/>
+</header>
+<!-- ===== Intro Section ===== -->
+<section id="intro">
+<div class="section-content">
+<div class="profile-photo">
+<img alt="Profile Photo" src="static/profile.jpeg"/>
+</div>
+<div class="text-content">
+<p>
             Hello! I’m <strong>Kooshan Maleki</strong>, a senior undergraduate student in
             <strong>Computer Engineering</strong> at
-            <a href="https://aut.ac.ir" target="_blank" rel="noopener">
+            <a href="https://aut.ac.ir" rel="noopener" target="_blank">
               Amirkabir University of Technology
             </a>. 
             I’m deeply passionate about weaving together <em>quantum computing</em>, 
@@ -47,362 +61,345 @@
             algorithms. I love discovering new ways to bridge theory and practice, collaborating across 
             disciplines, and pushing the boundaries of what emerging technologies can achieve.
           </p>
-          <p><strong>Location:</strong> Tehran, Iran</p>
-
-          <div class="profile-icons">
-            <!-- Email -->
-            <a href="mailto:Kooshan.mk@aut.ac.ir" title="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <!-- Scholar -->
-            <a href="https://scholar.google.com" title="Google Scholar">
-              <i class="ai ai-google-scholar-square"></i>
-            </a>
-            <!-- GitHub -->
-            <a href="https://github.com/Kooshano" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <!-- LinkedIn -->
-            <a 
-              href="https://www.linkedin.com/in/Kooshan-Maleki" 
-              title="LinkedIn"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <!-- Twitter -->
-            <a href="https://twitter.com/Kooshano" title="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <!-- CV PDF -->
-            <a href="static/CV.pdf" title="CV">
-              <i class="ai ai-cv"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Education Section ===== -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="item">
-        <h3>B.Sc. in Computer Engineering</h3>
-        <p><strong>Institution:</strong> Amirkabir University of Technology (2021 – Present)</p>
-        <p><strong>GPA:</strong> 19.00/20, ranked 4<sup>th</sup> among over 100 students.</p>
-      </div>
-      <div class="item">
-        <h3>Diploma</h3>
-        <p><strong>Institution:</strong> Allameh Helli High School (NODET) (2017 – 2021)</p>
-        <p><strong>GPA:</strong> 19.40/20</p>
-      </div>
-    </section>
-
-    <!-- ===== Research Experience (Accordion) ===== -->
-    <section id="research">
-      <h2>Research Experience</h2>
-      <div class="accordion">
-        <button class="accordion-btn">
+<p><strong>Location:</strong> Tehran, Iran</p>
+<div class="profile-icons">
+<!-- Email -->
+<a href="mailto:Kooshan.mk@aut.ac.ir" title="Email">
+<i class="fas fa-envelope"></i>
+</a>
+<!-- Scholar -->
+<a href="https://scholar.google.com" title="Google Scholar">
+<i class="ai ai-google-scholar-square"></i>
+</a>
+<!-- GitHub -->
+<a href="https://github.com/Kooshano" title="GitHub">
+<i class="fab fa-github"></i>
+</a>
+<!-- LinkedIn -->
+<a href="https://www.linkedin.com/in/Kooshan-Maleki" title="LinkedIn">
+<i class="fab fa-linkedin"></i>
+</a>
+<!-- Twitter -->
+<a href="https://twitter.com/Kooshano" title="Twitter">
+<i class="fab fa-twitter"></i>
+</a>
+<!-- CV PDF -->
+<a href="static/CV.pdf" title="CV">
+<i class="ai ai-cv"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== Education Section ===== -->
+<section id="education">
+<h2>Education</h2>
+<div class="item">
+<h3>B.Sc. in Computer Engineering</h3>
+<p><strong>Institution:</strong> Amirkabir University of Technology (2021 – Present)</p>
+<p><strong>GPA:</strong> 19.00/20, ranked 4<sup>th</sup> among over 100 students.</p>
+</div>
+<div class="item">
+<h3>Diploma</h3>
+<p><strong>Institution:</strong> Allameh Helli High School (NODET) (2017 – 2021)</p>
+<p><strong>GPA:</strong> 19.40/20</p>
+</div>
+</section>
+<!-- ===== Research Experience (Accordion) ===== -->
+<section id="research">
+<h2>Research Experience</h2>
+<div class="accordion">
+<button class="accordion-btn"><span class="arrow">▾</span>
           Quantum Algorithms for Robotic Motion Planning (Nov 2024 – Present)
         </button>
-        <div class="accordion-content">
-          <p>
-            <strong>Advisors:</strong> Prof. Farrokh Janabi-Sharif (Toronto Metropolitan University), 
+<div class="accordion-content">
+<p>
+<strong>Advisors:</strong> Prof. Farrokh Janabi-Sharif (Toronto Metropolitan University), 
             Prof. Negar Ashari (Amirkabir University of Technology)
           </p>
-          <ul>
-            <li>Investigating quantum algorithms (HHL) to enhance robotic pathfinding and decision-making.</li>
-            <li>Implementing quantum phase estimation &amp; Hamiltonian simulation for navigation.</li>
-            <li>Analyzing scalability and efficiency in dynamic, complex environments.</li>
-            <li>Exploring hybrid quantum-classical approaches for real-time applications.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Industrial Experience (Accordion) ===== -->
-    <section id="experience">
-      <h2>Industrial Experience</h2>
-      <div class="accordion">
-        <button class="accordion-btn">
+<ul>
+<li>Investigating quantum algorithms (HHL) to enhance robotic pathfinding and decision-making.</li>
+<li>Implementing quantum phase estimation &amp; Hamiltonian simulation for navigation.</li>
+<li>Analyzing scalability and efficiency in dynamic, complex environments.</li>
+<li>Exploring hybrid quantum-classical approaches for real-time applications.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- ===== Industrial Experience (Accordion) ===== -->
+<section id="experience">
+<h2>Industrial Experience</h2>
+<div class="accordion">
+<button class="accordion-btn"><span class="arrow">▾</span>
           AI Vision Developer, SIMUT (June 2024 – Present)
         </button>
-        <div class="accordion-content">
-          <p><strong>Website:</strong> 
-            <a href="https://mfp.co.ir" target="_blank">https://mfp.co.ir</a>
-          </p>
-          <ul>
-            <li>Developed a machine vision system for heart ultrasound images using OpenCV and ML.</li>
-            <li>Collaborated with Shahid Rajaei Hospital to gather real-world medical data.</li>
-            <li>Built interactive UIs with PySide6 &amp; Matplotlib, visualizing ultrasound data.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Selected Projects (same style as Publications) ===== -->
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <ul class="publication-list">
-
-        <!-- Project #1: Quantum Machine Learning -->
-        <li class="publication-item">
-          <div class="publication-content">
-            <div class="publication-thumbnail">
-              <img 
-                src="static/HHL.png" 
-                alt="Quantum Machine Learning" 
-                class="pull-figure"
-              >
-            </div>
-            <div class="publication-details">
-              <h3 class="publication-title">Quantum Machine Learning (2024)</h3>
-              <div class="publication-info">
-                <p class="publication-authors">Personal Project</p>
-                <p class="publication-conference">
+<div class="accordion-content">
+<p><strong>Website:</strong>
+<a href="https://mfp.co.ir" target="_blank">https://mfp.co.ir</a>
+</p>
+<ul>
+<li>Developed a machine vision system for heart ultrasound images using OpenCV and ML.</li>
+<li>Collaborated with Shahid Rajaei Hospital to gather real-world medical data.</li>
+<li>Built interactive UIs with PySide6 &amp; Matplotlib, visualizing ultrasound data.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- ===== Selected Projects (same style as Publications) ===== -->
+<section id="projects">
+<h2>Selected Projects</h2>
+<ul class="publication-list">
+<!-- Project #1: Quantum Machine Learning -->
+<li class="publication-item">
+<div class="publication-content">
+<div class="publication-thumbnail">
+<img alt="Quantum Machine Learning" class="pull-figure" src="static/HHL.png"/>
+</div>
+<div class="publication-details">
+<h3 class="publication-title">Quantum Machine Learning (2024)</h3>
+<div class="publication-info">
+<p class="publication-authors">Personal Project</p>
+<p class="publication-conference">
                   Explored hybrid quantum-classical models using Qiskit (variational algorithms), 
                   amplitude encoding, QFT, and IQFT for data analysis.
                 </p>
-                <p class="publication-links">
-                  <a 
-                    href="https://github.com/Kooshano/SomeQuantumRepo" 
-                    class="link-button github-link"
-                  >
-                    <span class="link-icon"><i class="fab fa-github"></i></span>
-                    <span>Repo</span>
-                    <span class="star-span">
-                      <i class="fa-regular fa-star"></i>
-                      <span class="stars-count">Loading...</span>
-                    </span>
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <!-- Project #2: Kolmogorov-Arnold Neural Networks (KAN) -->
-        <li class="publication-item">
-          <div class="publication-content">
-            <div class="publication-thumbnail">
-              <img 
-                src="static/KAN.png" 
-                alt="Kolmogorov-Arnold Neural Networks" 
-                class="pull-figure"
-              >
-            </div>
-            <div class="publication-details">
-              <h3 class="publication-title">Kolmogorov-Arnold Neural Networks (2024)</h3>
-              <div class="publication-info">
-                <p class="publication-authors">Personal Project</p>
-                <p class="publication-conference">
+<p class="publication-links">
+<a class="link-button github-link" href="https://github.com/Kooshano/SomeQuantumRepo">
+<span class="link-icon"><i class="fab fa-github"></i></span>
+<span>Repo</span>
+<span class="star-span">
+<i class="fa-regular fa-star"></i>
+<span class="stars-count">Loading...</span>
+</span>
+</a>
+</p>
+</div>
+</div>
+</div>
+</li>
+<!-- Project #2: Kolmogorov-Arnold Neural Networks (KAN) -->
+<li class="publication-item">
+<div class="publication-content">
+<div class="publication-thumbnail">
+<img alt="Kolmogorov-Arnold Neural Networks" class="pull-figure" src="static/KAN.png"/>
+</div>
+<div class="publication-details">
+<h3 class="publication-title">Kolmogorov-Arnold Neural Networks (2024)</h3>
+<div class="publication-info">
+<p class="publication-authors">Personal Project</p>
+<p class="publication-conference">
                   Implemented from scratch with spline interpolation, custom activations, and backprop;
                   tested on diverse datasets.
                 </p>
-                <p class="publication-links">
-                  <a 
-                    href="https://github.com/Kooshano/KAN" 
-                    class="link-button github-link"
-                  >
-                    <span class="link-icon"><i class="fab fa-github"></i></span>
-                    <span>Repo</span>
-                    <span class="star-span">
-                      <i class="fa-regular fa-star"></i>
-                      <span class="stars-count">Loading...</span>
-                    </span>
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- Add more projects if needed -->
-      </ul>
-    </section>
-
-    <!-- ===== Teaching Experience (Accordion) ===== -->
-    <section id="teaching">
-      <h2>Teaching Experience</h2>
-      <div class="accordion">
-        <button class="accordion-btn">
+<p class="publication-links">
+<a class="link-button github-link" href="https://github.com/Kooshano/KAN">
+<span class="link-icon"><i class="fab fa-github"></i></span>
+<span>Repo</span>
+<span class="star-span">
+<i class="fa-regular fa-star"></i>
+<span class="stars-count">Loading...</span>
+</span>
+</a>
+</p>
+</div>
+</div>
+</div>
+</li>
+<!-- Add more projects if needed -->
+</ul>
+</section>
+<!-- ===== Teaching Experience (Accordion) ===== -->
+<section id="teaching">
+<h2>Teaching Experience</h2>
+<div class="accordion">
+<button class="accordion-btn"><span class="arrow">▾</span>
           Teaching Assistant, Amirkabir University of Technology (2021 – Present)
         </button>
-        <div class="accordion-content">
-    
-          <!-- New "course-list" with two columns -->
-          <ul class="course-list">
-            <li>
-              <span class="course-name">Special Topics in Quantum Computing (Grad, Head TA)</span>
-              <span class="course-term">Spring 2025</span>
-            </li>
-            <li>
-              <span class="course-name">Microprocessors and Assembly (Head TA)</span>
-              <span class="course-term">Spring 2025</span>
-            </li>
-            <li>
-              <span class="course-name">Computer Networks</span>
-              <span class="course-term">Fall 2024, Spring 2025</span>
-            </li>
-            <li>
-              <span class="course-name">Applied Linear Algebra</span>
-              <span class="course-term">Fall 2024</span>
-            </li>
-            <li>
-              <span class="course-name">Computer Architecture</span>
-              <span class="course-term">Spring 2024, Spring 2025</span>
-            </li>
-            <li>
-              <span class="course-name">Algorithm Design</span>
-              <span class="course-term">Spring 2023</span>
-            </li>
-            <li>
-              <span class="course-name">Logic Circuits</span>
-              <span class="course-term">Spring 2023</span>
-            </li>
-          </ul>
-    
-        </div>
-      </div>
-
-      <div class="accordion">
-        <button class="accordion-btn">Physics Instructor, Allameh Helli High School (2021 – 2023)</button>
-        <div class="accordion-content">
-          <p>Trained students for the Iranian Physics Olympiad, focusing on deep conceptual understanding.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Certifications Section (Accordion) with Preview Images ===== -->
-    <section id="certifications">
-      <h2>Certifications and Specialized Courses</h2>
-
-      <!-- QubitXQubit -->
-      <div class="accordion">
-        <button class="accordion-btn">
-          QubitXQubit Quantum Computing Course (2023 – 2024)
-        </button>
-        <div class="accordion-content">
-          <p><strong>Institution:</strong> The Coding School</p>
-          <ul>
-            <li>Studied quantum computing fundamentals: qubits, superposition, entanglement.</li>
-            <li>Implemented Deutsch-Jozsa algorithm on quantum simulators.</li>
-          </ul>
-          <div class="certificate-preview">
-            <img 
-              src="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg" 
-              alt="QubitXQubit Certificate Preview" 
-              class="cert-thumbnail"
-              data-full="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg"
-            >
-            <p><em>Click image to open inline PDF</em></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Supervised Machine Learning -->
-      <div class="accordion">
-        <button class="accordion-btn">Supervised Machine Learning (2022)</button>
-        <div class="accordion-content">
-          <p><strong>Institution:</strong> Stanford University (Coursera)</p>
-          <ul>
-            <li>Focus on regression, classification, and regularization.</li>
-            <li>Hands-on projects with Scikit-Learn.</li>
-          </ul>
-          <div class="certificate-preview">
-            <img 
-              src="static/Supervised Machine Learning- Regression and Classification.jpg" 
-              alt="Supervised ML Certificate" 
-              class="cert-thumbnail"
-              data-full="static/Supervised Machine Learning- Regression and Classification.jpg"
-            >
-            <p><em>Click image to enlarge</em></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Neural Networks & Deep Learning -->
-      <div class="accordion">
-        <button class="accordion-btn">Neural Networks &amp; Deep Learning (2022)</button>
-        <div class="accordion-content">
-          <p><strong>Institution:</strong> Stanford University (Coursera)</p>
-          <ul>
-            <li>Mastered neural network architectures and deep learning optimization.</li>
-            <li>Built models using TensorFlow &amp; Keras for classification tasks.</li>
-          </ul>
-          <div class="certificate-preview">
-            <img 
-              src="static/Neural Networks and Deep Learning.jpg" 
-              alt="NN & DL Certificate" 
-              class="cert-thumbnail"
-              data-full="static/Neural Networks and Deep Learning.jpg"
-            >
-            <p><em>Click image to enlarge</em></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Honors and Awards ===== -->
-    <section id="awards">
-      <h2>Honors and Awards</h2>
-      <ul>
-        <li>Top 1% in the Iranian Universities Entrance Exam (2021)</li>
-        <li>QubitXQubit course scholarship (MIT &amp; Stanford Ph.D.)</li>
-        <li>Attended the 32nd Physics Olympiad of Iran</li>
-        <li>Winner of the 2017 SamCode Programming Competition in Data Analysis</li>
-      </ul>
-    </section>
-
-    <!-- ===== Skills and Competencies ===== -->
-    <section id="skills">
-      <h2>Skills and Competencies</h2>
-      <ul>
-        <li>
-          <strong>Programming Languages:</strong> Python, Java, C, C++, Verilog, VHDL
+<div class="accordion-content">
+<!-- New "course-list" with two columns -->
+<ul class="course-list">
+<li>
+<span class="course-name">Special Topics in Quantum Computing (Grad, Head TA)</span>
+<span class="course-term">Spring 2025</span>
+</li>
+<li>
+<span class="course-name">Microprocessors and Assembly (Head TA)</span>
+<span class="course-term">Spring 2025</span>
+</li>
+<li>
+<span class="course-name">Computer Networks</span>
+<span class="course-term">Fall 2024, Spring 2025</span>
+</li>
+<li>
+<span class="course-name">Applied Linear Algebra</span>
+<span class="course-term">Fall 2024</span>
+</li>
+<li>
+<span class="course-name">Computer Architecture</span>
+<span class="course-term">Spring 2024, Spring 2025</span>
+</li>
+<li>
+<span class="course-name">Algorithm Design</span>
+<span class="course-term">Spring 2023</span>
+</li>
+<li>
+<span class="course-name">Logic Circuits</span>
+<span class="course-term">Spring 2023</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="accordion">
+<button class="accordion-btn"><span class="arrow">▾</span>Physics Instructor, Allameh Helli High School (2021 – 2023)</button>
+<div class="accordion-content">
+<p>Trained students for the Iranian Physics Olympiad, focusing on deep conceptual understanding.</p>
+</div>
+</div>
+</section>
+<!-- ===== Certifications Section (Accordion) with Preview Images ===== -->
+<section id="certifications">
+<h2>Certifications and Specialized Courses</h2>
+<!-- NYUAD Hackathon 2025 -->
+<div class="accordion highlight">
+<button class="accordion-btn"><span class="arrow">▾</span>The 13th Annual International Hackathon for Social Good, NYUAD — Issued Apr 2025</button>
+<div class="accordion-content">
+<p><strong>Organizer:</strong> NYU Abu Dhabi (International Hackathon for Social Good in the Arab World)</p>
+<p><strong>Focus:</strong> Quantum Computing, Quantum Machine Learning</p>
+<div class="cert-gallery">
+<figure>
+<a href="static/hackathon_certificate.jpg" rel="noopener" target="_blank">
+<img alt="NYUAD Hackathon 2025 Certificate" src="static/hackathon_certificate.jpg"/>
+</a>
+<figcaption>Certificate</figcaption>
+</figure>
+<figure>
+<a href="static/hackathon_team.jpg" rel="noopener" target="_blank">
+<img alt="NYUAD Hackathon 2025 Team" src="static/hackathon_team.jpg"/>
+</a>
+<figcaption>Team</figcaption>
+</figure>
+<figure>
+<a href="static/hackathon_linkedin.png" rel="noopener" target="_blank">
+<img alt="NYUAD Hackathon Credential — LinkedIn" src="static/hackathon_linkedin.png"/>
+</a>
+<figcaption>Credential</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<!-- QubitXQubit -->
+<div class="accordion">
+<button class="accordion-btn"><span class="arrow">▾</span>QubitXQubit Quantum Computing Course (2023–2024)</button>
+<div class="accordion-content">
+<p><strong>Institution:</strong> The Coding School (QxQ)</p>
+<ul>
+<li>Studied qubits, superposition, entanglement, and basic quantum algorithms.</li>
+<li>Implemented Deutsch‑Jozsa on simulators.</li>
+</ul>
+<div class="cert-gallery">
+<figure>
+<a href="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg" rel="noopener" target="_blank">
+<img alt="QxQ Certificate" src="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg"/>
+</a>
+<figcaption>QxQ Certificate</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<!-- Coursera: Supervised ML -->
+<div class="accordion">
+<button class="accordion-btn"><span class="arrow">▾</span>Supervised Machine Learning — Regression &amp; Classification (Coursera)</button>
+<div class="accordion-content">
+<ul>
+<li>Regression, classification, model evaluation, and practical ML workflow.</li>
+</ul>
+<div class="cert-gallery">
+<figure>
+<a href="static/Supervised Machine Learning- Regression and Classification.jpg" rel="noopener" target="_blank">
+<img alt="Supervised ML Certificate" src="static/Supervised Machine Learning- Regression and Classification.jpg"/>
+</a>
+<figcaption>Course Certificate</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<!-- Coursera: Neural Networks & Deep Learning -->
+<div class="accordion">
+<button class="accordion-btn"><span class="arrow">▾</span>Neural Networks &amp; Deep Learning (Coursera)</button>
+<div class="accordion-content">
+<ul>
+<li>Fundamentals of deep learning, backpropagation, architectures.</li>
+</ul>
+<div class="cert-gallery">
+<figure>
+<a href="static/Neural Networks and Deep Learning.jpg" rel="noopener" target="_blank">
+<img alt="Neural Networks &amp; Deep Learning Certificate" src="static/Neural Networks and Deep Learning.jpg"/>
+</a>
+<figcaption>Course Certificate</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== Honors and Awards ===== -->
+<section id="awards">
+<h2>Honors and Awards</h2>
+<ul>
+<li>Top 1% in the Iranian Universities Entrance Exam (2021)</li>
+<li>QubitXQubit course scholarship (MIT &amp; Stanford Ph.D.)</li>
+<li>Attended the 32nd Physics Olympiad of Iran</li>
+<li>Winner of the 2017 SamCode Programming Competition in Data Analysis</li>
+</ul>
+</section>
+<!-- ===== Skills and Competencies ===== -->
+<section id="skills">
+<h2>Skills and Competencies</h2>
+<ul>
+<li>
+<strong>Programming Languages:</strong> Python, Java, C, C++, Verilog, VHDL
         </li>
-        <li>
-          <strong>Libraries/Frameworks:</strong> PyTorch, TensorFlow, NumPy, Pandas, PyGame, Cirq, Qiskit, Qiskit Aer, Scikit-Learn
+<li>
+<strong>Libraries/Frameworks:</strong> PyTorch, TensorFlow, NumPy, Pandas, PyGame, Cirq, Qiskit, Qiskit Aer, Scikit-Learn
         </li>
-        <li>
-          <strong>Tools/Platforms:</strong> GitHub, PySide6, OpenCV, Matplotlib, Kubernetes, Docker
+<li>
+<strong>Tools/Platforms:</strong> GitHub, PySide6, OpenCV, Matplotlib, Kubernetes, Docker
         </li>
-      </ul>
-    </section>
-
-    <!-- ===== Languages (with TOEFL preview) ===== -->
-    <section id="languages">
-      <h2>Languages</h2>
-      <ul>
-        <li><strong>Persian:</strong> Native</li>
-        <li>
-          <strong>English:</strong> Fluent (TOEFL 106)
-          <div class="certificate-preview">
-            <img 
-              src="static/Toefl.png" 
-              alt="TOEFL Score Preview" 
-              class="cert-thumbnail"
-              data-full="static/Toefl.png"
-            >
-            <p><em>Click image to preview PDF</em></p>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ===== Footer ===== -->
-    <footer>
-      <p>&copy; 2025 Kooshan Maleki. All rights reserved.</p>
-    </footer>
-  </div>
-
-  <!-- ===== Modal Overlay for PDF/Image Preview ===== -->
-  <div id="modalOverlay" class="modal-overlay">
-    <div class="modal-content">
-      <span class="modal-close" id="modalClose">&times;</span>
-      <div id="modalBody"></div>
-    </div>
-  </div>
-
-  <!-- Main JS -->
-  <script src="script.js"></script>
+</ul>
+</section>
+<!-- ===== Languages (with TOEFL preview) ===== -->
+<section id="languages">
+<h2>Languages</h2>
+<div class="accordion">
+<button class="accordion-btn"><span class="arrow">▾</span>English — Fluent (TOEFL 106)</button>
+<div class="accordion-content">
+<ul>
+<li>Speaking: Fluent</li>
+<li>Reading: Fluent</li>
+<li>Writing: Fluent</li>
+</ul>
+<div class="cert-gallery">
+<figure>
+<a href="static/Toefl.png" rel="noopener" target="_blank">
+<img alt="TOEFL Score Preview" src="static/Toefl.png"/>
+</a>
+<figcaption>TOEFL Score</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="accordion">
+<button class="accordion-btn"><span class="arrow">▾</span>Persian — Native</button>
+<div class="accordion-content">
+<p>Mother tongue (native proficiency).</p>
+</div>
+</div>
+</section>
+<!-- ===== Footer ===== -->
+<footer>
+<p>© 2025 Kooshan Maleki. All rights reserved.</p>
+</footer>
+</div>
+<!-- Main JS -->
+<script src="script.js"></script>
 </body>
 </html>
