@@ -103,19 +103,110 @@ document.querySelectorAll('a.nav-link').forEach(link => {
 // === Scroll spy ===
 const sections = document.querySelectorAll('section[id]');
 const navMap = {};
+const navLinksContainer = document.querySelector('.nav-links');
+const navInner = document.querySelector('.nav-inner');
 document.querySelectorAll('.nav-link').forEach(a => { const id = a.getAttribute('href').replace('#',''); navMap[id] = a; });
 const underline = document.querySelector('.nav-underline');
-const spy = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.id;
-      Object.values(navMap).forEach(el => el?.classList.remove('active'));
-      navMap[id]?.classList.add('active');
-      if (underline && navMap[id]) underline.style.width = navMap[id].getBoundingClientRect().width + 'px';
+
+function updateUnderline(activeLink) {
+  if (!underline || !activeLink || !navInner) return;
+  
+  // Calculate position relative to the nav-inner container
+  const linkRect = activeLink.getBoundingClientRect();
+  const navInnerRect = navInner.getBoundingClientRect();
+  const leftOffset = linkRect.left - navInnerRect.left;
+  
+  underline.style.width = linkRect.width + 'px';
+  underline.style.transform = `translateX(${leftOffset}px)`;
+  underline.style.opacity = '1';
+}
+
+// Function to find and activate the current section
+function updateActiveSection() {
+  let currentSection = null;
+  let minDistance = Infinity;
+  
+  sections.forEach(sec => {
+    if (!navMap[sec.id]) return; // Skip sections without nav links
+    
+    const rect = sec.getBoundingClientRect();
+    const scrollOffset = 100; // Offset for navbar height
+    const sectionTop = rect.top + window.scrollY - scrollOffset;
+    const scrollPosition = window.scrollY;
+    
+    // Check if section is in view and closest to scroll position
+    if (rect.top <= scrollOffset + 150 && rect.bottom >= scrollOffset) {
+      const distance = Math.abs(sectionTop - scrollPosition);
+      if (distance < minDistance) {
+        minDistance = distance;
+        currentSection = sec;
+      }
     }
   });
-}, { rootMargin: '-50% 0px -40% 0px', threshold: 0.1 });
+  
+  // If no section found, check which one is closest to the top
+  if (!currentSection) {
+    sections.forEach(sec => {
+      if (!navMap[sec.id]) return;
+      const rect = sec.getBoundingClientRect();
+      if (rect.top <= 200 && rect.top >= -100) {
+        if (!currentSection || rect.top > currentSection.getBoundingClientRect().top) {
+          currentSection = sec;
+        }
+      }
+    });
+  }
+  
+  if (currentSection && navMap[currentSection.id]) {
+    const id = currentSection.id;
+    Object.values(navMap).forEach(el => el?.classList.remove('active'));
+    navMap[id].classList.add('active');
+    updateUnderline(navMap[id]);
+  }
+}
+
+// Use IntersectionObserver for efficiency, but also check on scroll
+const spy = new IntersectionObserver(entries => {
+  updateActiveSection();
+}, { rootMargin: '-100px 0px -60% 0px', threshold: [0, 0.1, 0.25, 0.5] });
 sections.forEach(sec => spy.observe(sec));
+
+// Also update on scroll for more accurate detection
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(updateActiveSection, 10);
+}, { passive: true });
+
+// Update underline on window resize
+window.addEventListener('resize', () => {
+  const activeLink = document.querySelector('.nav-link.active');
+  if (activeLink) updateUnderline(activeLink);
+});
+
+// Update underline on nav scroll
+if (navLinksContainer) {
+  navLinksContainer.addEventListener('scroll', () => {
+    const activeLink = document.querySelector('.nav-link.active');
+    if (activeLink) updateUnderline(activeLink);
+  });
+}
+
+// Initialize on load
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    updateActiveSection();
+    const activeLink = document.querySelector('.nav-link.active');
+    if (activeLink) {
+      updateUnderline(activeLink);
+    }
+  }, 100);
+});
+
+// Also initialize immediately if DOM is already loaded
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  setTimeout(updateActiveSection, 50);
+}
 
 // === Reveal on scroll ===
 const revObs = new IntersectionObserver((entries) => {
