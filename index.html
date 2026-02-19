@@ -4,55 +4,93 @@
 <head>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta charset="utf-8"/>
+<meta content="Kooshan Maleki is a computer engineering student and researcher focused on quantum computing and machine learning, with projects in QNN optimization, HHL, and neural architectures." name="description"/>
+<meta content="Kooshan Maleki" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Kooshan Maleki" property="og:title"/>
+<meta content="Portfolio of Kooshan Maleki: quantum computing, machine learning, research, projects, teaching, and certifications." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://kooshan.info" property="og:url"/>
+<meta content="https://kooshan.info/static/profile.jpeg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Kooshan Maleki" name="twitter:title"/>
+<meta content="Portfolio of Kooshan Maleki focused on quantum computing and machine learning." name="twitter:description"/>
+<meta content="https://kooshan.info/static/profile.jpeg" name="twitter:image"/>
+<link href="https://kooshan.info" rel="canonical"/>
 <title>Kooshan Maleki</title>
 <!-- Main CSS -->
 <link href="styles.css" rel="stylesheet"/>
 <!-- Favicon/Icon (optional) -->
-<link href="static/logo.svg" rel="icon" sizes="32x32"/>
+<link href="static/icon.png" rel="icon" sizes="32x32"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet"/>
 <!-- Font Awesome + Academicons for icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kooshan Maleki",
+  "url": "https://kooshan.info",
+  "image": "https://kooshan.info/static/profile.jpeg",
+  "jobTitle": "Undergraduate Researcher",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Amirkabir University of Technology"
+  },
+  "sameAs": [
+    "https://github.com/Kooshano",
+    "https://www.linkedin.com/in/Kooshan-Maleki",
+    "https://twitter.com/Kooshano"
+  ]
+}
+</script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 <canvas aria-hidden="true" class="quantum-canvas" id="quantumCanvas"></canvas>
 <nav class="navbar">
 <div class="nav-inner">
 <a class="brand" href="#intro">
-<img alt="Logo" class="brand-logo theme-image" data-src-dark="static/logo-dark.svg" data-src-light="static/logo-light.svg" src="static/logo-dark2.svg"/>
+<img alt="Logo" class="brand-logo theme-image" data-src-dark="static/logo-dark.svg" data-src-light="static/logo-light.png" fetchpriority="high" loading="eager" src="static/logo-dark.svg"/>
 </a>
-<button aria-label="Toggle navigation" class="nav-toggle">☰</button>
-<ul class="nav-links">
+<button aria-expanded="false" aria-label="Toggle navigation" aria-controls="navLinks" class="nav-toggle">☰</button>
+<ul class="nav-links" id="navLinks">
 <li><a class="nav-link" href="#intro">Home</a></li>
 <li><a class="nav-link" href="#education">Education</a></li>
 <li><a class="nav-link" href="#research">Research</a></li>
+<li><a class="nav-link" href="#experience">Experience</a></li>
 <li><a class="nav-link" href="#projects">Projects</a></li>
 <li><a class="nav-link" href="#teaching">Teaching</a></li>
 <li><a class="nav-link" href="#certifications">Certifications</a></li>
 <li><a class="nav-link" href="#awards">Awards</a></li>
 <li><a class="nav-link" href="#skills">Skills</a></li>
 <li><a class="nav-link" href="#languages">Languages</a></li>
+<li><a class="nav-link" href="#hobbies">Interests</a></li>
 </ul>
-<button class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
+<button aria-label="Switch theme" class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
 <div class="nav-underline"></div>
 </div>
 </nav>
-<div class="container">
+<main class="container" id="main">
 <!-- ===== Header ===== -->
 <header>
 <h1 class="title">Kooshan Maleki</h1>
-<img alt="Logo" class="header-icon theme-image" data-src-dark="static/logo-dark.svg" data-src-light="static/logo-light.svg" src="static/logo-dark2.svg"/>
+<img alt="Logo" class="header-icon theme-image" data-src-dark="static/logo-dark.svg" data-src-light="static/logo-light.png" loading="eager" src="static/logo-dark.svg"/>
 </header>
 <!-- ===== Intro Section ===== -->
 <section id="intro">
 <div class="section-content">
 <div class="profile-photo">
-<img alt="Profile Photo" src="static/profile.jpeg"/>
+<img alt="Profile Photo" decoding="async" fetchpriority="high" height="400" loading="eager" src="static/profile.jpeg" width="400"/>
 </div>
 <div class="text-content">
 <p>
             Hello! I'm <strong>Kooshan Maleki</strong>, a senior undergraduate student in
             <strong>Computer Engineering</strong> at
-            <a href="https://aut.ac.ir" rel="noopener" target="_blank">
+            <a href="https://aut.ac.ir" rel="noopener noreferrer" target="_blank">
               Amirkabir University of Technology
             </a>. 
             I'm passionate about <em>quantum computing</em> and <em>machine learning</em>, with research 
@@ -68,19 +106,19 @@
 <i class="fas fa-envelope"></i>
 </a>
 <!-- Scholar -->
-<a href="https://scholar.google.com" title="Google Scholar">
+<a href="https://scholar.google.com/scholar?q=Kooshan+Maleki+quantum+computing" rel="noopener noreferrer" target="_blank" title="Google Scholar">
 <i class="ai ai-google-scholar-square"></i>
 </a>
 <!-- GitHub -->
-<a href="https://github.com/Kooshano" title="GitHub">
+<a href="https://github.com/Kooshano" rel="noopener noreferrer" target="_blank" title="GitHub">
 <i class="fab fa-github"></i>
 </a>
 <!-- LinkedIn -->
-<a href="https://www.linkedin.com/in/Kooshan-Maleki" title="LinkedIn">
+<a href="https://www.linkedin.com/in/Kooshan-Maleki" rel="noopener noreferrer" target="_blank" title="LinkedIn">
 <i class="fab fa-linkedin"></i>
 </a>
 <!-- Twitter -->
-<a href="https://twitter.com/Kooshano" title="Twitter">
+<a href="https://twitter.com/Kooshano" rel="noopener noreferrer" target="_blank" title="Twitter">
 <i class="fab fa-twitter"></i>
 </a>
 <!-- CV PDF -->
@@ -89,6 +127,27 @@
 </a>
 </div>
 </div>
+</div>
+</section>
+<section id="highlights">
+<h2>Selected Highlights</h2>
+<div class="highlights-grid">
+<article class="highlight-card">
+<h3>Quantum + ML Research</h3>
+<p>Active researcher on hybrid quantum-classical learning systems, focusing on QNN optimization, circuit cutting, and evolutionary search.</p>
+</article>
+<article class="highlight-card">
+<h3>Top Academic Performance</h3>
+<p>B.Sc. GPA 18.84/20 (4.0/4.0), top 5%, with thesis on HHL vs. classical linear solvers and linear regression.</p>
+</article>
+<article class="highlight-card">
+<h3>Teaching Leadership</h3>
+<p>Head TA and TA across advanced programming, quantum computing, architecture, and networking courses.</p>
+</article>
+<article class="highlight-card">
+<h3>Applied AI Engineering</h3>
+<p>Built medical imaging solutions for cardiac ultrasound analysis and measurement workflows in an industrial setting.</p>
+</article>
 </div>
 </section>
 <!-- ===== Education Section ===== -->
@@ -155,7 +214,7 @@
         </button>
 <div class="accordion-content">
 <p><strong>Website:</strong>
-<a href="https://mfp.co.ir" target="_blank">https://mfp.co.ir</a>
+<a href="https://mfp.co.ir" rel="noopener noreferrer" target="_blank">https://mfp.co.ir</a>
 </p>
 <ul>
 <li>Developed a machine vision system for analyzing heart ultrasound images to enhance the accuracy and efficiency of medical diagnostics.</li>
@@ -176,17 +235,19 @@
 <li class="publication-item">
 <div class="publication-content">
 <div class="publication-thumbnail">
-<img alt="HHL Quantum Linear Solver" class="pull-figure" src="static/HHL.png"/>
+<img alt="HHL Quantum Linear Solver" class="pull-figure" decoding="async" height="630" loading="lazy" src="static/HHL.png" width="1034"/>
 </div>
 <div class="publication-details">
 <h3 class="publication-title">HHL Quantum Linear Solver Project (2024)</h3>
 <div class="publication-info">
 <p class="publication-authors">Amirkabir University of Technology</p>
-<p class="publication-conference">
-                  A comprehensive implementation of the Harrow-Hassidim-Lloyd (HHL) quantum algorithm for solving linear systems of equations. The project includes classical and quantum solvers with GPU acceleration support, linear regression applications, and extensive logging capabilities. Features automatic GPU detection, performance optimization, and comparison with classical NumPy-based solutions. Implemented using Qiskit with support for both CPU and GPU backends, demonstrating quantum advantage in solving linear systems and regression problems.
-                </p>
+<ul class="project-summary">
+<li><strong>Problem:</strong> Benchmark quantum linear-system solving against strong classical baselines.</li>
+<li><strong>Build:</strong> End-to-end HHL implementation with CPU/GPU support, logging, and regression pipeline integration.</li>
+<li><strong>Stack:</strong> Qiskit, Python, NumPy, CUDA-enabled workflows.</li>
+</ul>
 <p class="publication-links">
-<a class="link-button github-link" href="https://github.com/Kooshano/HHL">
+<a class="link-button github-link" href="https://github.com/Kooshano/HHL" rel="noopener noreferrer" target="_blank">
 <span class="link-icon"><i class="fab fa-github"></i></span>
 <span>Repo</span>
 <span class="star-span">
@@ -203,17 +264,19 @@
 <li class="publication-item">
 <div class="publication-content">
 <div class="publication-thumbnail">
-<img alt="Kolmogorov-Arnold Neural Networks" class="pull-figure" src="static/KAN.png"/>
+<img alt="Kolmogorov-Arnold Neural Networks" class="pull-figure" decoding="async" height="630" loading="lazy" src="static/KAN.png" width="1034"/>
 </div>
 <div class="publication-details">
 <h3 class="publication-title">Kolmogorov-Arnold Neural Networks (2024)</h3>
 <div class="publication-info">
 <p class="publication-authors">Personal Project</p>
-<p class="publication-conference">
-                  Implemented a neural network from scratch, exploring spline interpolation techniques to enhance network convergence and performance. Developed custom activation functions and backpropagation algorithms to optimize learning efficiency. Utilized spline interpolation for smoother gradient updates, reducing oscillations and improving the stability of the training process. Conducted extensive testing on various datasets to validate the robustness and scalability of the implemented neural network architecture. Documented the development process and findings, contributing to a deeper understanding of the interplay between spline interpolation and neural network optimization.
-                </p>
+<ul class="project-summary">
+<li><strong>Problem:</strong> Improve convergence stability for neural models via functional approximation techniques.</li>
+<li><strong>Build:</strong> From-scratch KAN-style neural network with custom activations and handcrafted backpropagation.</li>
+<li><strong>Stack:</strong> Python, numerical optimization, spline interpolation.</li>
+</ul>
 <p class="publication-links">
-<a class="link-button github-link" href="https://github.com/Kooshano/KAN">
+<a class="link-button github-link" href="https://github.com/Kooshano/KAN" rel="noopener noreferrer" target="_blank">
 <span class="link-icon"><i class="fab fa-github"></i></span>
 <span>Repo</span>
 <span class="star-span">
@@ -230,15 +293,17 @@
 <li class="publication-item">
 <div class="publication-content">
 <div class="publication-thumbnail">
-<img alt="Hybrid QNN Optimization Framework with Circuit Cutting and Evolutionary Algorithms" class="pull-figure" src="static/Novelty.png"/>
+<img alt="Hybrid QNN Optimization Framework with Circuit Cutting and Evolutionary Algorithms" class="pull-figure" decoding="async" height="630" loading="lazy" src="static/Novelty.png" width="1034"/>
 </div>
 <div class="publication-details">
 <h3 class="publication-title">A Hybrid QNN Optimization Framework with Circuit Cutting and Evolutionary Algorithms (2025)</h3>
 <div class="publication-info">
 <p class="publication-authors">Research with Dr. Alberto Marchisio (eBRAIN Lab at NYUAD)</p>
-<p class="publication-conference">
-                  Developing a hybrid Quantum Neural Network (QNN) optimization framework that combines circuit cutting techniques with evolutionary algorithms to enhance quantum machine learning performance. Exploring Neural Architecture Search (NAS) methodologies to automatically discover optimal quantum neural network architectures, reducing circuit complexity and improving scalability through advanced optimization techniques.
-                </p>
+<ul class="project-summary">
+<li><strong>Problem:</strong> Scale QNN training while preserving quality under hardware constraints.</li>
+<li><strong>Build:</strong> Hybrid framework combining circuit cutting with evolutionary NAS-style optimization.</li>
+<li><strong>Status:</strong> Active research with focus on accuracy-vs-resource tradeoff analysis.</li>
+</ul>
 </div>
 </div>
 </div>
@@ -312,20 +377,20 @@
 <p><strong>Focus:</strong> Quantum Computing, Quantum Machine Learning</p>
 <div class="cert-gallery">
 <figure>
-<a href="static/hackathon_certificate.jpg" rel="noopener" target="_blank">
-<img alt="NYUAD Hackathon 2025 Certificate" src="static/hackathon_certificate.jpg"/>
+<a href="static/hackathon_certificate.jpg" rel="noopener noreferrer" target="_blank">
+<img decoding="async" loading="lazy" alt="NYUAD Hackathon 2025 Certificate" src="static/hackathon_certificate.jpg"/>
 </a>
 <figcaption>Certificate</figcaption>
 </figure>
 <figure>
-<a href="static/hackathon_team.jpg" rel="noopener" target="_blank">
-<img alt="NYUAD Hackathon 2025 Team" src="static/hackathon_team.jpg"/>
+<a href="static/hackathon_team.jpg" rel="noopener noreferrer" target="_blank">
+<img decoding="async" loading="lazy" alt="NYUAD Hackathon 2025 Team" src="static/hackathon_team.jpg"/>
 </a>
 <figcaption>Team</figcaption>
 </figure>
 <figure>
-<a href="static/hackathon_linkedin.png" rel="noopener" target="_blank">
-<img alt="NYUAD Hackathon Credential — LinkedIn" src="static/hackathon_linkedin.png"/>
+<a href="static/hackathon_linkedin.png" rel="noopener noreferrer" target="_blank">
+<img decoding="async" loading="lazy" alt="NYUAD Hackathon Credential — LinkedIn" src="static/hackathon_linkedin.png"/>
 </a>
 <figcaption>Credential</figcaption>
 </figure>
@@ -343,8 +408,8 @@
 </ul>
 <div class="cert-gallery">
 <figure>
-<a href="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg" rel="noopener" target="_blank">
-<img alt="QxQ Certificate" src="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg"/>
+<a href="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg" rel="noopener noreferrer" target="_blank">
+<img decoding="async" loading="lazy" alt="QxQ Certificate" src="static/QxQ Certificate-Maleki Dizadji-Kooshan.jpg"/>
 </a>
 <figcaption>QxQ Certificate</figcaption>
 </figure>
@@ -361,8 +426,8 @@
 </ul>
 <div class="cert-gallery">
 <figure>
-<a href="static/Supervised Machine Learning- Regression and Classification.jpg" rel="noopener" target="_blank">
-<img alt="Supervised ML Certificate" src="static/Supervised Machine Learning- Regression and Classification.jpg"/>
+<a href="static/Supervised Machine Learning- Regression and Classification.jpg" rel="noopener noreferrer" target="_blank">
+<img decoding="async" loading="lazy" alt="Supervised ML Certificate" src="static/Supervised Machine Learning- Regression and Classification.jpg"/>
 </a>
 <figcaption>Course Certificate</figcaption>
 </figure>
@@ -379,8 +444,8 @@
 </ul>
 <div class="cert-gallery">
 <figure>
-<a href="static/Neural Networks and Deep Learning.jpg" rel="noopener" target="_blank">
-<img alt="Neural Networks &amp; Deep Learning Certificate" src="static/Neural Networks and Deep Learning.jpg"/>
+<a href="static/Neural Networks and Deep Learning.jpg" rel="noopener noreferrer" target="_blank">
+<img decoding="async" loading="lazy" alt="Neural Networks &amp; Deep Learning Certificate" src="static/Neural Networks and Deep Learning.jpg"/>
 </a>
 <figcaption>Course Certificate</figcaption>
 </figure>
@@ -427,8 +492,8 @@
 </ul>
 <div class="cert-gallery">
 <figure>
-<a href="static/Toefl.png" rel="noopener" target="_blank">
-<img alt="TOEFL Score Preview" src="static/Toefl.png"/>
+<a href="static/Toefl.png" rel="noopener noreferrer" target="_blank">
+<img decoding="async" loading="lazy" alt="TOEFL Score Preview" src="static/Toefl.png"/>
 </a>
 <figcaption>TOEFL Score</figcaption>
 </figure>
@@ -454,9 +519,9 @@
 </section>
 <!-- ===== Footer ===== -->
 <footer>
-<p>© 2025 Kooshan Maleki. All rights reserved.</p>
+<p>© 2026 Kooshan Maleki. All rights reserved.</p>
 </footer>
-</div>
+</main>
 <!-- Main JS -->
 <script src="script.js"></script>
 </body>
