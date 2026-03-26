@@ -73,8 +73,9 @@ function updateUnderline(link) {
   if (!link || !underline || !navInner) return;
   const linkRect = link.getBoundingClientRect();
   const navRect = navInner.getBoundingClientRect();
+  const scrollOffset = navLinks ? navLinks.scrollLeft : 0;
   underline.style.width = `${linkRect.width}px`;
-  underline.style.transform = `translateX(${linkRect.left - navRect.left}px)`;
+  underline.style.transform = `translateX(${linkRect.left - navRect.left + scrollOffset}px)`;
   underline.style.opacity = '1';
 }
 
@@ -132,6 +133,13 @@ function initNavigation() {
     const active = document.querySelector('.nav-link.active');
     if (active && window.innerWidth > 980) updateUnderline(active);
   });
+
+  if (navLinks) {
+    navLinks.addEventListener('scroll', () => {
+      const active = document.querySelector('.nav-link.active');
+      if (active && window.innerWidth > 980) updateUnderline(active);
+    }, { passive: true });
+  }
 
   setActive();
 }

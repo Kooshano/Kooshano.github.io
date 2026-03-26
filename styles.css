@@ -129,7 +129,7 @@ button:focus-visible {
 .nav-links {
   display: flex;
   flex: 1;
-  gap: 0.45rem;
+  gap: 0.15rem;
   list-style: none;
   margin: 0;
   overflow-x: auto;
@@ -145,9 +145,9 @@ button:focus-visible {
   border-radius: 8px;
   color: var(--text);
   display: inline-block;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  padding: 0.38rem 0.65rem;
+  padding: 0.38rem 0.48rem;
   white-space: nowrap;
 }
 
@@ -454,8 +454,13 @@ ul {
   display: inline-flex;
   font-size: 0.9rem;
   font-weight: 700;
-  gap: 0.35rem;
+  gap: 0.4rem;
   padding: 0.43rem 0.75rem;
+}
+
+.link-icon {
+  display: inline-flex;
+  font-size: 1.15rem;
 }
 
 .link-button:hover {
