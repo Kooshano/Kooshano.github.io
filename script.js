@@ -98,9 +98,8 @@ function initNavigation() {
       if (!target) return;
 
       event.preventDefault();
-      const y = target.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top: y, behavior: 'smooth' });
       closeMobileNav();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
