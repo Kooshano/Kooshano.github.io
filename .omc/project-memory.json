@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1779564864072,
+  "projectRoot": "/Users/kooshan/Kooshano.github.io",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "static"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "static": {
+      "path": "static",
+      "purpose": "Static files",
+      "fileCount": 19,
+      "lastAccessed": 1779564864066,
+      "keyFiles": [
+        "CV.pdf",
+        "HHL.png",
+        "KAN.png",
+        "NAS.png",
+        "Neural Networks and Deep Learning.jpg"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "index.html",
+      "accessCount": 11,
+      "lastAccessed": 1779565979893,
+      "type": "file"
+    },
+    {
+      "path": "styles.css",
+      "accessCount": 1,
+      "lastAccessed": 1779565319576,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
