@@ -1,461 +1,334 @@
 <!DOCTYPE html>
+<html lang="en" data-theme="light">
 
-<html lang="en">
 <head>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta charset="utf-8"/>
-<meta content="Kooshan Maleki is a computer engineering student and researcher focused on quantum computing and machine learning. QNAS on arXiv (2604.07013), to appear at IEEE IJCNN 2026. Projects include QNN optimization, HHL, and neural architectures." name="description"/>
-<meta content="Kooshan Maleki" name="author"/>
-<meta content="index, follow" name="robots"/>
-<meta content="Kooshan Maleki" property="og:title"/>
-<meta content="Portfolio of Kooshan Maleki: quantum computing and machine learning. QNAS (arXiv:2604.07013), IEEE IJCNN 2026. Research, projects, teaching, and certifications." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://kooshan.info" property="og:url"/>
-<meta content="https://kooshan.info/static/profile.jpeg" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="Kooshan Maleki" name="twitter:title"/>
-<meta content="Portfolio of Kooshan Maleki; QNAS arXiv:2604.07013, IEEE IJCNN 2026; quantum ML." name="twitter:description"/>
-<meta content="https://kooshan.info/static/profile.jpeg" name="twitter:image"/>
-<link href="https://kooshan.info" rel="canonical"/>
-<title>Kooshan Maleki</title>
-<!-- Main CSS -->
-<link href="styles.css" rel="stylesheet"/>
-<!-- Favicon/Icon (optional) -->
-<link href="static/icon.png" rel="icon" sizes="32x32"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700&display=swap" rel="stylesheet"/>
-<!-- Font Awesome + Academicons for icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css" rel="stylesheet"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Kooshan Maleki",
-  "url": "https://kooshan.info",
-  "image": "https://kooshan.info/static/profile.jpeg",
-  "jobTitle": "Undergraduate Researcher",
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Amirkabir University of Technology"
-  },
-  "sameAs": [
-    "https://github.com/Kooshano",
-    "https://www.linkedin.com/in/Kooshan-Maleki",
-    "https://twitter.com/Kooshano"
-  ]
-}
-</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Kooshan Maleki</title>
+  <meta name="description"
+    content="Kooshan Maleki is a computer engineering student at Amirkabir University of Technology and a researcher at the eBRAIN Lab, NYU Abu Dhabi, working on hybrid quantum-classical machine learning. QNAS, arXiv:2604.07013, IEEE IJCNN 2026.">
+  <meta name="author" content="Kooshan Maleki">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://kooshan.info">
+
+  <meta property="og:title" content="Kooshan Maleki">
+  <meta property="og:description"
+    content="Computer engineering student and researcher in hybrid quantum-classical machine learning. QNAS, arXiv:2604.07013, IEEE IJCNN 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kooshan.info">
+  <meta property="og:image" content="https://kooshan.info/static/profile.webp">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kooshan Maleki">
+  <meta name="twitter:description"
+    content="Computer engineering student and researcher in hybrid quantum-classical machine learning. QNAS, arXiv:2604.07013, IEEE IJCNN 2026.">
+  <meta name="twitter:image" content="https://kooshan.info/static/profile.webp">
+  <meta name="theme-color" content="#0e0f11">
+
+  <link rel="icon" href="static/icon.webp" sizes="any" type="image/webp">
+  <link rel="apple-touch-icon" href="static/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="static/profile.webp">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // Set the theme before first paint so there is no flash of the wrong one.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) { }
+      var dark = saved ? saved === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    })();
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kooshan Maleki",
+      "url": "https://kooshan.info",
+      "image": "https://kooshan.info/static/profile.webp",
+      "jobTitle": "Undergraduate Researcher",
+      "email": "mailto:Kooshan.m@nyu.edu",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "eBRAIN Lab, NYU Abu Dhabi"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Amirkabir University of Technology"
+      },
+      "knowsAbout": ["Quantum Computing", "Quantum Machine Learning", "Neural Architecture Search"],
+      "sameAs": [
+        "https://github.com/Kooshano",
+        "https://www.linkedin.com/in/Kooshan-Maleki",
+        "https://twitter.com/Kooshano",
+        "https://scholar.google.com/citations?user=Y-WZ4wkAAAAJ"
+      ]
+    }
+  </script>
 </head>
+
 <body>
-<a class="skip-link" href="#main">Skip to main content</a>
-<canvas aria-hidden="true" class="quantum-canvas" id="quantumCanvas"></canvas>
-<nav class="navbar">
-<div class="nav-inner">
-<a class="brand" href="#intro">
-<img alt="Logo" class="brand-logo theme-image" data-src-dark="static/logo-dark.svg" data-src-light="static/logo-light.png" fetchpriority="high" loading="eager" src="static/logo-dark.svg"/>
-</a>
-<button aria-expanded="false" aria-label="Toggle navigation" aria-controls="navLinks" class="nav-toggle">☰</button>
-<ul class="nav-links" id="navLinks">
-<li><a class="nav-link" href="#intro">Home</a></li>
-<li><a class="nav-link" href="#education">Education</a></li>
-<li><a class="nav-link" href="#research">Research</a></li>
-<li><a class="nav-link" href="#publications">Publications</a></li>
-<li><a class="nav-link" href="#experience">Experience</a></li>
-<li><a class="nav-link" href="#projects">Projects</a></li>
-<li><a class="nav-link" href="#teaching">Teaching</a></li>
-<li><a class="nav-link" href="#awards">Awards</a></li>
-<li><a class="nav-link" href="#skills">Skills</a></li>
-</ul>
-<button aria-label="Switch theme" class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</button>
-<div class="nav-underline"></div>
-</div>
-</nav>
-<main class="container" id="main">
-<!-- ===== Header ===== -->
-<header>
-<h1 class="title">Kooshan Maleki</h1>
-<img alt="Logo" class="header-icon theme-image" data-src-dark="static/logo-dark.svg" data-src-light="static/logo-light.png" loading="eager" src="static/logo-dark.svg"/>
-</header>
-<!-- ===== Intro Section ===== -->
-<section id="intro">
-<div class="section-content">
-<div class="profile-photo">
-<img alt="Profile Photo" decoding="async" fetchpriority="high" height="400" loading="eager" src="static/profile.jpeg" width="400"/>
-</div>
-<div class="text-content">
-<p>
-            Hello! I'm <strong>Kooshan Maleki</strong>, a senior <strong>Computer Engineering</strong> student at
-            <a href="https://aut.ac.ir" rel="noopener noreferrer" target="_blank">Amirkabir University of Technology</a>
-            and a researcher at the <a href="https://ebrain4everyone.com" rel="noopener noreferrer" target="_blank">eBRAIN Lab, NYU Abu Dhabi</a>.
-            My research focuses on hybrid quantum-classical algorithms — from multi-objective architecture search
-            for quantum neural networks (<a href="#publications">QNAS</a>: <a href="https://arxiv.org/abs/2604.07013" rel="noopener noreferrer" target="_blank">arXiv</a>, <strong>IEEE IJCNN 2026</strong>)
-            to deep learning-enhanced quantum linear solvers. I'm broadly interested in how quantum computing
-            can advance machine learning and tackle hard optimization problems.
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Icon sprite. Thin stroke, currentColor, so it follows the theme. -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <path d="M7 9l5 3.5L17 9" />
+      <path d="M2 17V7a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2z" />
+    </symbol>
+    <symbol id="i-scholar" viewBox="0 0 24 24">
+      <path d="M2 9.5L12 5.5l10 4-10 4-10-4z" />
+      <path d="M6 11.9v4.6c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.6" />
+      <path d="M22 9.5v5" />
+    </symbol>
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path
+        d="M16 22.027v-2.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7a5.44 5.44 0 00-1.5-3.75 5.07 5.07 0 00-.09-3.77s-1.18-.35-3.91 1.48a13.38 13.38 0 00-7 0c-2.73-1.83-3.91-1.48-3.91-1.48A5.07 5.07 0 005 5.797a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7a3.37 3.37 0 00-.94 2.58v2.87M9 20.027c-3 .973-5.5 0-7-3" />
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24">
+      <path d="M21 8v8a5 5 0 01-5 5H8a5 5 0 01-5-5V8a5 5 0 015-5h8a5 5 0 015 5zM7 17v-7" />
+      <path d="M11 17v-3.25M11 10v3.75m0 0c0-3.75 6-3.75 6 0V17M7 7.01l.01-.011" />
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24">
+      <path d="M3 3l18 18M21 3L3 21" />
+    </symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24">
+      <path d="M4 21.4V2.6a.6.6 0 01.6-.6h11.652a.6.6 0 01.424.176l3.148 3.148A.6.6 0 0120 5.75V21.4a.6.6 0 01-.6.6H4.6a.6.6 0 01-.6-.6z" />
+      <path d="M8 10h8M8 18h8M8 14h5" />
+    </symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <path d="M12 18a6 6 0 100-12 6 6 0 000 12z" />
+      <path d="M12 2v1M12 21v1M21 12h1M2 12h1M18.36 5.64l.7-.7M4.94 19.06l.7-.7M18.36 18.36l.7.7M4.94 4.94l.7.7" />
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path d="M21.5 14.08A9 9 0 119.92 2.5 7 7 0 0021.5 14.08z" />
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" />
+      <path d="M12 11a1 1 0 100-2 1 1 0 000 2z" />
+    </symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24">
+      <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+      <path d="M13 2.05S16 6 16 12s-3 9.95-3 9.95M11 21.95S8 18 8 12s3-9.95 3-9.95M2.63 15.5H21.4M2.63 8.5H21.4" />
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path
+        d="M8.587 8.236l2.598-5.232a.911.911 0 011.63 0l2.598 5.232 5.808.844a.902.902 0 01.503 1.542l-4.202 4.07.992 5.75c.127.738-.653 1.3-1.32.952L12 18.678l-5.195 2.716c-.666.349-1.446-.214-1.319-.951l.992-5.75-4.202-4.071a.902.902 0 01.503-1.542l5.808-.844z" />
+    </symbol>
+    <symbol id="i-arxiv" viewBox="0 0 24 24">
+      <path d="M3 4h5l8 16h5" />
+      <path d="M21 4h-5l-3.2 6.4" />
+      <path d="M8.5 20H3" />
+    </symbol>
+  </svg>
+
+  <header class="hero">
+    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+    <div class="hero-inner">
+      <!-- Hero is dark in both themes, so it always takes the light-ink logo. -->
+      <img class="hero-logo" src="static/logo-dark.webp" width="304" height="180"
+        alt="Kooshan Maleki's logo: the bra-ket expression |κ⟩⟨μ|">
+      <img class="hero-photo" src="static/profile.webp" width="400" height="400" fetchpriority="high"
+        alt="Kooshan Maleki">
+      <h1 class="hero-name">Kooshan Maleki</h1>
+      <p class="hero-role">Computer engineering student &amp; researcher</p>
+      <p class="hero-place">Amirkabir University of Technology &middot; eBRAIN Lab, NYU Abu Dhabi</p>
+
+      <nav class="hero-icons" aria-label="Profiles">
+        <a class="icon-link" href="mailto:Kooshan.m@nyu.edu" title="Email">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <use href="#i-mail" /></svg>
+        </a>
+        <a class="icon-link" href="https://scholar.google.com/citations?user=Y-WZ4wkAAAAJ&amp;hl=en" target="_blank"
+          rel="noopener noreferrer" title="Google Scholar">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <use href="#i-scholar" /></svg>
+        </a>
+        <a class="icon-link" href="https://github.com/Kooshano" target="_blank" rel="noopener noreferrer"
+          title="GitHub">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <use href="#i-github" /></svg>
+        </a>
+        <a class="icon-link" href="https://www.linkedin.com/in/Kooshan-Maleki" target="_blank" rel="noopener noreferrer"
+          title="LinkedIn">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <use href="#i-linkedin" /></svg>
+        </a>
+        <a class="icon-link" href="https://twitter.com/Kooshano" target="_blank" rel="noopener noreferrer" title="X">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <use href="#i-x" /></svg>
+        </a>
+        <a class="icon-link" href="cv/" title="Curriculum Vitae">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <use href="#i-doc" /></svg>
+        </a>
+      </nav>
+    </div>
+
+    <a class="icon-link hero-scroll" href="#main" aria-label="Scroll down">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <use href="#i-chevron-down" /></svg>
+    </a>
+  </header>
+
+  <div class="column" id="main">
+    <div class="bar">
+      <span class="bar-logo">
+        <img class="logo-light" src="static/logo-light.webp" width="304" height="180"
+          alt="Kooshan Maleki's logo: the bra-ket expression |κ⟩⟨μ|">
+        <img class="logo-dark" src="static/logo-dark.webp" width="304" height="180" alt="" aria-hidden="true">
+      </span>
+      <a class="bar-link" href="cv/">Curriculum vitae</a>
+      <button class="theme-toggle" type="button" aria-label="Switch theme">
+        <svg width="20" height="20" class="icon-sun" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <use href="#i-sun" /></svg>
+        <svg width="20" height="20" class="icon-moon" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <use href="#i-moon" /></svg>
+      </button>
+    </div>
+
+    <main>
+      <h1>Hello 👋,</h1>
+
+      <p>
+        I'm Kooshan Maleki, a senior computer engineering student at
+        <a href="https://aut.ac.ir" target="_blank" rel="noopener noreferrer">Amirkabir University of Technology</a>
+        in Tehran. I work on hybrid quantum-classical machine learning — the part of quantum computing
+        where the interesting question is not whether a circuit runs, but whether it earns its place next
+        to a classical model.
+      </p>
+
+      <p>
+        I'm a researcher at the
+        <a href="https://ebrain4everyone.com" target="_blank" rel="noopener noreferrer">eBRAIN Lab</a>
+        at NYU Abu Dhabi, with
+        <a href="https://scholar.google.com/citations?user=xSR276UAAAAJ&amp;hl=en" target="_blank"
+          rel="noopener noreferrer">Prof. Muhammad Shafique</a> and
+        <a href="https://scholar.google.com/citations?user=6QPlLnAAAAAJ&amp;hl=en" target="_blank"
+          rel="noopener noreferrer">Dr. Alberto Marchisio</a>. There I built
+        <a href="#publications">QNAS</a>, a multi-objective neural architecture search framework for quantum
+        neural networks that trades accuracy against circuit cost and wire-cutting partitionability instead of
+        chasing accuracy alone.
+      </p>
+
+      <p>
+        I also work at <a href="https://qucal.aut.ac.ir" target="_blank" rel="noopener noreferrer">QuCAL</a>
+        with <a href="https://infoscience.epfl.ch/entities/person/1ffb2690-902e-4d17-94ff-0d7d05c74138" target="_blank"
+          rel="noopener noreferrer">Prof. Negar Ashari Astani</a>, on making the Hybrid HHL algorithm practical
+        through deep learning-based Pauli decomposition. My bachelor's thesis was the honest version of that
+        question: how the
+        <a href="https://github.com/Kooshano/HHL" target="_blank" rel="noopener noreferrer">HHL algorithm</a>
+        actually compares to classical linear solvers, and what that means for linear regression.
+      </p>
+
+      <p>
+        Teaching is the other half. I've been a teaching assistant at Amirkabir since 2021 across nine courses —
+        advanced programming, computer architecture, networks, algorithms — and head TA for the graduate quantum
+        computing course. Before that I coached physics olympiad students at my old high school. The
+        <a href="cv/">full CV</a> has the rest: industry work on cardiac ultrasound imaging, projects, and awards.
+      </p>
+
+      <p>
+        Outside research I like <em>(rewrite this bit — it's the part that makes the page yours)</em>: reading,
+        long walks, and building small things that don't need to justify themselves.
+      </p>
+
+      <section id="publications">
+        <h2>Publications</h2>
+
+        <article class="entry">
+          <div class="figure">
+            <img src="static/novelty.webp" width="1200" height="461" loading="lazy" decoding="async"
+              alt="QNAS pipeline: search space, NSGA-II optimization, and Pareto-optimal architecture selection">
+          </div>
+          <h3>QNAS: A Neural Architecture Search Framework for Accurate and Efficient Quantum Neural Networks</h3>
+          <p class="authors"><strong>K. Maleki</strong>,
+            <a href="https://scholar.google.com/citations?user=6QPlLnAAAAAJ&amp;hl=en" target="_blank"
+              rel="noopener noreferrer">A. Marchisio</a>,
+            <a href="https://scholar.google.com/citations?user=xSR276UAAAAJ&amp;hl=en" target="_blank"
+              rel="noopener noreferrer">M. Shafique</a>
           </p>
-<p><strong>Location:</strong> Tehran, Iran</p>
-<div class="profile-icons">
-<!-- Email -->
-<a href="mailto:Kooshan.m@nyu.edu" title="Email">
-<i class="fas fa-envelope"></i>
-</a>
-<!-- Scholar -->
-<a href="https://scholar.google.com/citations?user=Y-WZ4wkAAAAJ&hl=en" rel="noopener noreferrer" target="_blank" title="Google Scholar">
-<i class="ai ai-google-scholar-square"></i>
-</a>
-<!-- GitHub -->
-<a href="https://github.com/Kooshano" rel="noopener noreferrer" target="_blank" title="GitHub">
-<i class="fab fa-github"></i>
-</a>
-<!-- LinkedIn -->
-<a href="https://www.linkedin.com/in/Kooshan-Maleki" rel="noopener noreferrer" target="_blank" title="LinkedIn">
-<i class="fab fa-linkedin"></i>
-</a>
-<!-- Twitter -->
-<a href="https://twitter.com/Kooshano" rel="noopener noreferrer" target="_blank" title="Twitter">
-<i class="fab fa-twitter"></i>
-</a>
-<!-- CV PDF -->
-<a href="static/CV.pdf" title="CV">
-<i class="ai ai-cv"></i>
-</a>
-</div>
-</div>
-</div>
-</section>
-<section id="highlights">
-<h2>Selected Highlights</h2>
-<div class="highlights-grid">
-<article class="highlight-card">
-<h3>Quantum + ML Research</h3>
-<p>Researcher at <a href="https://ebrain4everyone.com" rel="noopener noreferrer" target="_blank">eBRAIN Lab (NYUAD)</a> and <a href="https://qucal.aut.ac.ir" rel="noopener noreferrer" target="_blank">QuCAL (AUT)</a>. <strong>QNAS</strong> on <a href="https://arxiv.org/abs/2604.07013" rel="noopener noreferrer" target="_blank">arXiv</a>, to appear at <strong>IEEE IJCNN 2026</strong>; code on <a href="https://github.com/Kooshano/QNAS" rel="noopener noreferrer" target="_blank">GitHub</a>.</p>
-</article>
-<article class="highlight-card">
-<h3>Top Academic Performance</h3>
-<p>B.Sc. GPA 18.84/20, top 5%, with thesis on HHL vs. classical linear solvers and linear regression.</p>
-</article>
-<article class="highlight-card">
-<h3>Teaching Leadership</h3>
-<p>Head TA and TA across advanced programming, quantum computing, architecture, and networking courses.</p>
-</article>
-<article class="highlight-card">
-<h3>Applied AI Engineering</h3>
-<p>Built medical imaging solutions for cardiac ultrasound analysis and measurement workflows in an industrial setting.</p>
-</article>
-</div>
-</section>
-<!-- ===== Education Section ===== -->
-<section id="education">
-<h2>Education</h2>
-<div class="item">
-<h3>B.Sc. in Computer Engineering</h3>
-<p><strong>Institution:</strong> Amirkabir University of Technology (2021 – Present)</p>
-<p><strong>GPA:</strong> 18.84/20, Top 5%</p>
-<p><strong>Bachelor Thesis:</strong> <a href="https://github.com/Kooshano/HHL" rel="noopener noreferrer" target="_blank">Analysis and Comparison of the HHL Algorithm with Classical Methods for Solving Linear Systems and Its Application in Linear Regression</a></p>
-</div>
-<div class="item">
-<h3>Diploma</h3>
-<p><strong>Institution:</strong> Allameh Helli High School (NODET) (2017 – 2021)</p>
-<p><strong>GPA:</strong> 19.40/20</p>
-</div>
-</section>
-<!-- ===== Research Experience (Accordion) ===== -->
-<section id="research">
-<h2>Research Experience</h2>
-<div class="accordion">
-<button class="accordion-btn"><span class="arrow">▾</span>
-          eBRAIN Lab, NYU Abu Dhabi (Apr 2025 – Present)
-        </button>
-<div class="accordion-content">
-<p>
-<strong>Supervisors:</strong> <a href="https://scholar.google.com/citations?user=xSR276UAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Prof. Muhammad Shafique</a> and <a href="https://scholar.google.com/citations?user=6QPlLnAAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">Dr. Alberto Marchisio</a>
+          <span class="meta venue">IEEE IJCNN 2026 &middot; WCCI 2026, Maastricht</span>
+          <p>
+            A multi-objective framework for automated architecture search over hybrid quantum-classical neural
+            networks. NSGA-II jointly optimizes accuracy, circuit cost and wire-cutting partitionability, with
+            checkpoint-based correlation analysis to stop unpromising candidates early.
           </p>
-<p>
-<strong>Website:</strong> <a href="https://ebrain4everyone.com" rel="noopener noreferrer" target="_blank">ebrain4everyone.com</a>
+          <p class="links">
+            <a class="button" href="https://arxiv.org/abs/2604.07013" target="_blank" rel="noopener noreferrer">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <use href="#i-arxiv" /></svg>
+              arXiv:2604.07013
+            </a>
+            <a class="button" data-repo="Kooshano/QNAS" href="https://github.com/Kooshano/QNAS" target="_blank"
+              rel="noopener noreferrer">
+              <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <use href="#i-github" /></svg>
+              Code
+              <span class="stars">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <use href="#i-star" /></svg>
+                <span class="stars-count">&mdash;</span>
+              </span>
+            </a>
           </p>
-<p>
-            Research on hybrid quantum-classical neural network optimization. Developed <strong>QNAS</strong>, a multi-objective framework for automated quantum neural architecture search using NSGA-II, accepted at <strong>IEEE IJCNN 2026</strong> (WCCI 2026).
-          </p>
-<ul>
-<li>Multi-objective architecture search over quantum circuit hyperparameters balancing accuracy, circuit cost, and hardware constraints.</li>
-<li>Circuit cutting and wire-cutting–aware objectives for near-term quantum devices.</li>
-<li>Checkpoint-based correlation analysis for early stopping of unpromising candidates.</li>
-<li>Paper: <a href="https://arxiv.org/abs/2604.07013" rel="noopener noreferrer" target="_blank">arXiv:2604.07013</a>. Open-source code: <a href="https://github.com/Kooshano/QNAS" rel="noopener noreferrer" target="_blank">github.com/Kooshano/QNAS</a>.</li>
-</ul>
-</div>
-</div>
-<div class="accordion">
-<button class="accordion-btn"><span class="arrow">▾</span>
-          QuCAL, Amirkabir University of Technology (Nov 2024 – Present)
-        </button>
-<div class="accordion-content">
-<p>
-<strong>Supervisor:</strong> <a href="https://infoscience.epfl.ch/entities/person/1ffb2690-902e-4d17-94ff-0d7d05c74138" rel="noopener noreferrer" target="_blank">Prof. Negar Ashari Astani</a>
-          </p>
-<p>
-<strong>Website:</strong> <a href="https://qucal.aut.ac.ir" rel="noopener noreferrer" target="_blank">qucal.aut.ac.ir</a>
-          </p>
-<p>
-            Research on enhancing the Hybrid HHL algorithm through deep learning-based Pauli decomposition techniques.
-          </p>
-<ul>
-<li>Developing deep learning methods for efficient Pauli decomposition to improve quantum algorithm performance.</li>
-<li>Integrating classical machine learning with quantum algorithms for enhanced linear-system solving.</li>
-<li>Exploring applications of the enhanced HHL algorithm in quantum machine learning tasks.</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- ===== Publications ===== -->
-<section id="publications">
-<h2>Publications</h2>
-<ul class="publication-list">
-<li class="publication-item">
-<div class="publication-content">
-<div class="publication-thumbnail">
-<img alt="QNAS pipeline: search space, NSGA-II optimization, and Pareto-optimal architecture selection" class="pull-figure" decoding="async" height="630" loading="lazy" src="static/Novelty.png" width="1034"/>
-</div>
-<div class="publication-details">
-<h3 class="publication-title">QNAS: A Neural Architecture Search Framework for Accurate and Efficient Quantum Neural Networks</h3>
-<p class="publication-authors"><strong>K. Maleki</strong>, <a href="https://scholar.google.com/citations?user=6QPlLnAAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">A. Marchisio</a>, <a href="https://scholar.google.com/citations?user=xSR276UAAAAJ&hl=en" rel="noopener noreferrer" target="_blank">M. Shafique</a></p>
-<span class="publication-venue">IEEE IJCNN 2026 (IEEE WCCI 2026), Maastricht</span>
-<p class="publication-eprint"><a href="https://arxiv.org/abs/2604.07013" rel="noopener noreferrer" target="_blank">arXiv:2604.07013</a> [quant-ph]</p>
-<p class="publication-abstract">Multi-objective framework for automated architecture search of hybrid quantum-classical neural networks. Uses NSGA-II to jointly optimize accuracy, circuit cost, and wire-cutting partitionability, with checkpoint-based correlation analysis for early stopping.</p>
-<p class="publication-links">
-<a class="link-button github-link" href="https://github.com/Kooshano/QNAS" rel="noopener noreferrer" target="_blank">
-<span class="link-icon"><i class="fab fa-github"></i></span>
-<span>Code</span>
-<span class="star-span">
-<i class="fa-regular fa-star"></i>
-<span class="stars-count">Loading...</span>
-</span>
-</a>
-<a class="link-button" href="https://arxiv.org/abs/2604.07013" rel="noopener noreferrer" target="_blank">
-<span class="link-icon"><i class="ai ai-arxiv"></i></span>
-<span>arXiv</span>
-</a>
-</p>
-</div>
-</div>
-</li>
-</ul>
-</section>
-<!-- ===== Industrial Experience (Accordion) ===== -->
-<section id="experience">
-<h2>Industrial Experience</h2>
-<div class="accordion">
-<button class="accordion-btn"><span class="arrow">▾</span>
-          AI Vision Developer, SIMUT (June 2024 – May 2025)
-        </button>
-<div class="accordion-content">
-<p><strong>Website:</strong>
-<a href="https://mfp.co.ir" rel="noopener noreferrer" target="_blank">https://mfp.co.ir</a>
-</p>
-<ul>
-<li>Developed a machine vision system for analyzing heart ultrasound images to enhance the accuracy and efficiency of medical diagnostics.</li>
-<li>Implemented AI algorithms using OpenCV and machine learning techniques to automate image segmentation and contour detection in medical imaging.</li>
-<li>Collaborated with Shahid Rajaei Hospital to collect and process real-world medical data, ensuring high accuracy in AI-driven analysis.</li>
-<li>Worked with technologies like PySide6 and Matplotlib to build interactive user interfaces and visualize medical data.</li>
-<li>Contributed to localizing cardiac ultrasound equipment, reducing dependency on foreign technologies through innovative AI solutions.</li>
-<li>Developed algorithms for precise measurement of heart muscle strain and ejection fraction (EF) using advanced image processing techniques.</li>
-</ul>
-</div>
-</div>
-</section>
-<!-- ===== Selected Projects (same style as Publications) ===== -->
-<section id="projects">
-<h2>Selected Projects</h2>
-<ul class="publication-list">
-<!-- Project #1: HHL Quantum Linear Solver -->
-<li class="publication-item">
-<div class="publication-content">
-<div class="publication-thumbnail">
-<img alt="HHL Quantum Linear Solver" class="pull-figure" decoding="async" height="630" loading="lazy" src="static/HHL.png" width="1034"/>
-</div>
-<div class="publication-details">
-<h3 class="publication-title">HHL Quantum Linear Solver Project (2024)</h3>
-<div class="publication-info">
-<p class="publication-authors">Amirkabir University of Technology</p>
-<ul class="project-summary">
-<li><strong>Problem:</strong> Benchmark quantum linear-system solving against strong classical baselines.</li>
-<li><strong>Build:</strong> End-to-end HHL implementation with CPU/GPU support, logging, and regression pipeline integration.</li>
-<li><strong>Stack:</strong> Qiskit, Python, NumPy, CUDA-enabled workflows.</li>
-</ul>
-<p class="publication-links">
-<a class="link-button github-link" href="https://github.com/Kooshano/HHL" rel="noopener noreferrer" target="_blank">
-<span class="link-icon"><i class="fab fa-github"></i></span>
-<span>Repo</span>
-<span class="star-span">
-<i class="fa-regular fa-star"></i>
-<span class="stars-count">Loading...</span>
-</span>
-</a>
-</p>
-</div>
-</div>
-</div>
-</li>
-<!-- Project #2: Kolmogorov-Arnold Neural Networks (KAN) -->
-<li class="publication-item">
-<div class="publication-content">
-<div class="publication-thumbnail">
-<img alt="Kolmogorov-Arnold Neural Networks" class="pull-figure" decoding="async" height="630" loading="lazy" src="static/KAN.png" width="1034"/>
-</div>
-<div class="publication-details">
-<h3 class="publication-title">Kolmogorov-Arnold Neural Networks (2024)</h3>
-<div class="publication-info">
-<p class="publication-authors">Personal Project</p>
-<ul class="project-summary">
-<li><strong>Problem:</strong> Improve convergence stability for neural models via functional approximation techniques.</li>
-<li><strong>Build:</strong> From-scratch KAN-style neural network with custom activations and handcrafted backpropagation.</li>
-<li><strong>Stack:</strong> Python, numerical optimization, spline interpolation.</li>
-</ul>
-<p class="publication-links">
-<a class="link-button github-link" href="https://github.com/Kooshano/KAN" rel="noopener noreferrer" target="_blank">
-<span class="link-icon"><i class="fab fa-github"></i></span>
-<span>Repo</span>
-<span class="star-span">
-<i class="fa-regular fa-star"></i>
-<span class="stars-count">Loading...</span>
-</span>
-</a>
-</p>
-</div>
-</div>
-</div>
-</li>
-</ul>
-</section>
-<!-- ===== Teaching Experience (Accordion) ===== -->
-<section id="teaching">
-<h2>Teaching Experience</h2>
-<div class="accordion">
-<button class="accordion-btn"><span class="arrow">▾</span>
-          Teaching Assistant, Amirkabir University of Technology (2021 – Present)
-        </button>
-<div class="accordion-content">
-<!-- New "course-list" with two columns -->
-<ul class="course-list">
-<li>
-<span class="course-name">Advanced Programming (under supervision of Dr. Taromi Rad)</span>
-<span class="course-term">Fall 2025</span>
-</li>
-<li>
-<span class="course-name">Software Engineering II (under supervision of Dr. Gohari)</span>
-<span class="course-term">Fall 2025</span>
-</li>
-<li>
-<span class="course-name">Special Topics in Quantum Computing (Graduate Course, Head TA, under supervision of Dr. Negar Ashari Astani)</span>
-<span class="course-term">Spring 2025</span>
-</li>
-<li>
-<span class="course-name">Microprocessors and Assembly (Head TA, under supervision of Dr. Farbeh)</span>
-<span class="course-term">Spring 2025</span>
-</li>
-<li>
-<span class="course-name">Computer Networks (under supervision of Dr. Sabaei)</span>
-<span class="course-term">Fall 2024, Spring 2025</span>
-</li>
-<li>
-<span class="course-name">Applied Linear Algebra (under supervision of Dr. Nazerfard)</span>
-<span class="course-term">Fall 2024</span>
-</li>
-<li>
-<span class="course-name">Computer Architecture (under supervision of Dr. Zarandi)</span>
-<span class="course-term">Spring 2024, Spring 2025</span>
-</li>
-<li>
-<span class="course-name">Algorithm Design (under supervision of Dr. Dolati Malekabad)</span>
-<span class="course-term">Spring 2023</span>
-</li>
-<li>
-<span class="course-name">Logic Circuits (under supervision of Dr. Sedighi, Dr. Saheb Zamani)</span>
-<span class="course-term">Spring 2023</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="accordion">
-<button class="accordion-btn"><span class="arrow">▾</span>Physics Instructor, Allameh Helli High School (2021 – 2023)</button>
-<div class="accordion-content">
-<p>Trained students for the Iranian Physics Olympiad, focusing on deep conceptual understanding.</p>
-</div>
-</div>
-</section>
-<!-- ===== Honors and Awards ===== -->
-<section id="awards">
-<h2>Honors and Awards</h2>
-<div class="award-item">
-<p><strong>NYUAD Hackathon 2025</strong> — Selected participant; worked on quantum algorithms for social good at NYU Abu Dhabi.</p>
-</div>
-<div class="award-item">
-<p><strong>Top 1% — Iranian Universities Entrance Examination</strong> — Ranked among the top 1% of over 142,000 participants (2021).</p>
-</div>
-<div class="award-item">
-<p><strong>QubitXQubit Scholarship</strong> — Awarded course scholarship by The Coding School (MIT/Stanford-run program).</p>
-</div>
-<div class="award-item">
-<p><strong>32nd Physics Olympiad of Iran</strong> — National-level competitor.</p>
-</div>
-<div class="award-item">
-<p><strong>SamCode Programming Competition (2017)</strong> — Winner in Data Analysis among 200 NODET students.</p>
-</div>
-</section>
-<!-- ===== Skills and Competencies ===== -->
-<section id="skills">
-<h2>Skills and Competencies</h2>
-<div class="skills-grid">
-<div class="skills-category">
-<h3>Programming Languages</h3>
-<div class="skill-tags">
-<span class="skill-tag">Python</span>
-<span class="skill-tag">Java</span>
-<span class="skill-tag">C</span>
-<span class="skill-tag">C++</span>
-<span class="skill-tag">Verilog</span>
-<span class="skill-tag">VHDL</span>
-</div>
-</div>
-<div class="skills-category">
-<h3>ML / Quantum Frameworks</h3>
-<div class="skill-tags">
-<span class="skill-tag">PyTorch</span>
-<span class="skill-tag">TensorFlow</span>
-<span class="skill-tag">PennyLane</span>
-<span class="skill-tag">Qiskit</span>
-<span class="skill-tag">Cirq</span>
-<span class="skill-tag">Scikit-Learn</span>
-<span class="skill-tag">pymoo</span>
-</div>
-</div>
-<div class="skills-category">
-<h3>Libraries & Tools</h3>
-<div class="skill-tags">
-<span class="skill-tag">NumPy</span>
-<span class="skill-tag">Pandas</span>
-<span class="skill-tag">OpenCV</span>
-<span class="skill-tag">Matplotlib</span>
-<span class="skill-tag">PySide6</span>
-</div>
-</div>
-<div class="skills-category">
-<h3>DevOps & Platforms</h3>
-<div class="skill-tags">
-<span class="skill-tag">Git</span>
-<span class="skill-tag">Docker</span>
-<span class="skill-tag">Kubernetes</span>
-<span class="skill-tag">GitHub Actions</span>
-</div>
-</div>
-</div>
-</section>
-<!-- ===== Footer ===== -->
-<footer>
-<p>© 2026 Kooshan Maleki. All rights reserved.</p>
-</footer>
-</main>
-<!-- Main JS -->
-<script src="script.js"></script>
+        </article>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <use href="#i-pin" /></svg>
+            <span>Tehran, Iran</span>
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <use href="#i-mail" /></svg>
+            <a href="mailto:Kooshan.m@nyu.edu">Kooshan.m@nyu.edu</a>
+          </li>
+          <li>
+            <svg fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <use href="#i-globe" /></svg>
+            <a href="https://kooshan.info">kooshan.info</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <time datetime="2026">2026</time> Kooshan Maleki. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,711 +1,624 @@
-* {
+/* ==========================================================================
+   Kooshan Maleki — grayscale, serif, two pages.
+   Palette is monochrome by design: emphasis comes from weight, space and
+   underlines, never from hue.
+   ========================================================================== */
+
+:root {
+  --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --measure: 40rem;
+
+  --bg: #ffffff;
+  --text: #1a1b1d;
+  --muted: #6b6e73;
+  --rule: #e4e5e7;
+  --surface: #fafafa;
+
+  /* The hero stays dark in both themes. */
+  --hero-bg: #0e0f11;
+  --hero-text: #f2f3f4;
+  --hero-muted: #9a9da3;
+}
+
+[data-theme="dark"] {
+  --bg: #131416;
+  --text: #e6e7e9;
+  --muted: #9a9da3;
+  --rule: #2a2c30;
+  --surface: #1a1c1f;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-:root {
-  --bg: #f4f7fb;
-  --bg-soft: #e7eef7;
-  --surface: rgba(255, 255, 255, 0.72);
-  --surface-solid: #ffffff;
-  --text: #0f1f33;
-  --muted: #435770;
-  --primary: #0f766e;
-  --accent: #ea580c;
-  --border: rgba(15, 31, 51, 0.14);
-  --shadow: 0 12px 42px rgba(15, 31, 51, 0.12);
-}
-
-body[data-theme="dark"] {
-  --bg: #09111f;
-  --bg-soft: #102138;
-  --surface: rgba(12, 22, 38, 0.72);
-  --surface-solid: #122338;
-  --text: #eef6ff;
-  --muted: #a2bad6;
-  --primary: #2dd4bf;
-  --accent: #fb923c;
-  --border: rgba(162, 186, 214, 0.24);
-  --shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
-}
-
 html {
-  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  background: var(--bg);
   color: var(--text);
-  background:
-    radial-gradient(circle at 8% 20%, rgba(45, 212, 191, 0.22), transparent 40%),
-    radial-gradient(circle at 88% 12%, rgba(251, 146, 60, 0.2), transparent 35%),
-    linear-gradient(180deg, var(--bg), var(--bg-soft));
-  font-family: "Manrope", "Segoe UI", sans-serif;
-  line-height: 1.65;
-  min-height: 100vh;
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.6;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.quantum-canvas {
-  inset: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: 0;
-}
-
-.skip-link {
-  background: var(--surface-solid);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  color: var(--text);
-  left: 1rem;
-  padding: 0.55rem 0.9rem;
-  position: fixed;
-  top: -60px;
-  transition: top 0.2s ease;
-  z-index: 200;
-}
-
-.skip-link:focus {
-  top: 1rem;
-}
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: var(--accent);
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--accent) 55%, white);
-  outline-offset: 2px;
-}
-
-.navbar {
-  backdrop-filter: blur(12px);
-  background: color-mix(in srgb, var(--surface-solid) 78%, transparent);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-inner {
-  align-items: center;
-  display: flex;
-  gap: 0.9rem;
-  margin: 0 auto;
-  max-width: 1180px;
-  padding: 0.6rem 1rem;
-  position: relative;
-}
-
-.brand {
-  align-items: center;
-  display: flex;
-  flex-shrink: 0;
-}
-
-.brand-logo {
-  display: block;
-  height: 42px;
-  width: auto;
-}
-
-.nav-toggle {
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  color: var(--text);
-  cursor: pointer;
-  display: none;
-  font-size: 1.2rem;
-  padding: 0.2rem 0.58rem;
-}
-
-.nav-links {
-  display: flex;
-  flex: 1;
-  gap: 0.15rem;
-  list-style: none;
-  margin: 0;
-  overflow-x: auto;
-  padding: 0.1rem 0 0.35rem;
-  scrollbar-width: none;
-}
-
-.nav-links::-webkit-scrollbar {
-  display: none;
-}
-
-.nav-link {
-  border-radius: 8px;
-  color: var(--text);
-  display: inline-block;
-  font-size: 0.82rem;
-  font-weight: 700;
-  padding: 0.38rem 0.48rem;
-  white-space: nowrap;
-}
-
-.nav-link.active {
-  background: color-mix(in srgb, var(--primary) 16%, transparent);
-}
-
-.theme-toggle {
-  background: transparent;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  color: var(--text);
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 0.32rem 0.6rem;
-}
-
-.nav-underline {
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  border-radius: 999px;
-  bottom: 0;
-  height: 2px;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  transform: translateX(0);
-  transition: transform 0.25s ease, width 0.25s ease, opacity 0.25s ease;
-  width: 0;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1080px;
-  padding: 0.5rem 1rem 2.2rem;
-  position: relative;
-  z-index: 1;
-}
-
-header {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  padding: 0.9rem 0.4rem;
-}
-
-.title {
-  font-family: "Sora", "Manrope", sans-serif;
-  font-size: clamp(2rem, 5.3vw, 3.2rem);
-  letter-spacing: -0.04em;
-  margin: 0;
-  min-height: 1.3em;
-}
-
-.title::after {
-  animation: blink 0.75s step-end infinite;
-  content: "|";
-  margin-left: 2px;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
+@media (max-width: 34rem) {
+  body {
+    font-size: 17px;
   }
 }
 
-.header-icon {
-  height: 52px;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Links: underlines carry the emphasis, since there is no accent hue. --- */
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--muted);
+  text-underline-offset: 0.18em;
+  transition: text-decoration-color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  color: var(--text);
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 520px;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.25rem 5.5rem;
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  /* Without this the column sizes to max-content and the role line runs off
+     the right edge on narrow screens. */
+  width: 100%;
+  max-width: 36rem;
+}
+
+.hero-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 34rem) {
+  .hero-photo {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+.hero-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(2rem, 7vw, 2.9rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.hero-role,
+.hero-place {
+  margin: 0;
+  color: var(--hero-muted);
+  font-weight: 400;
+}
+
+.hero-role {
+  font-size: clamp(1rem, 3.6vw, 1.15rem);
+}
+
+.hero-place {
+  font-size: clamp(0.9rem, 3.2vw, 1rem);
+}
+
+.hero-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 1.5rem;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--hero-text);
+  text-decoration: none;
+  border-radius: 50%;
+  opacity: 0.85;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.09);
+  text-decoration: none;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  animation: nudge 2.4s ease-in-out infinite;
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 6px);
+  }
+}
+
+/* ==========================================================================
+   Column
+   ========================================================================== */
+
+.column {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 3.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+}
+
+.bar-link {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* --- Logo: |κ⟩⟨μ| in Dirac notation. Two files, one per theme, because the
+       brackets flip from black to white. --- */
+
+.bar-logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 0.25rem;
+}
+
+.bar-logo img {
+  display: block;
+  height: 30px;
   width: auto;
 }
 
-section {
-  backdrop-filter: blur(5px);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  margin: 1rem 0;
-  padding: 1.35rem 1.2rem;
-  scroll-margin-top: 88px;
+.bar-logo .logo-dark {
+  display: none;
 }
 
-h2 {
-  font-family: "Sora", "Manrope", sans-serif;
-  font-size: clamp(1.24rem, 1.9vw, 1.45rem);
-  margin: 0 0 0.75rem;
-  position: relative;
+[data-theme="dark"] .bar-logo .logo-light {
+  display: none;
 }
 
-h2::after {
-  background: linear-gradient(90deg, var(--primary), transparent);
-  border-radius: 10px;
-  content: "";
+[data-theme="dark"] .bar-logo .logo-dark {
   display: block;
-  height: 3px;
-  margin-top: 0.38rem;
-  width: 130px;
 }
 
-h3 {
-  margin: 0.2rem 0 0.4rem;
+.hero-logo {
+  height: 34px;
+  width: auto;
+  margin-bottom: 1.25rem;
+  opacity: 0.9;
 }
 
-p,
-li,
-span,
-strong {
-  color: var(--text);
-}
-
-p {
-  margin: 0 0 0.8rem;
-}
-
-ul {
-  margin: 0.4rem 0 0.8rem;
-  padding-left: 1.15rem;
-}
-
-.section-content {
-  align-items: center;
-  display: flex;
-  gap: 1.2rem;
-}
-
-.profile-photo {
-  border: 2px solid color-mix(in srgb, var(--primary) 50%, white);
-  border-radius: 50%;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
-  flex-shrink: 0;
-  height: 172px;
-  overflow: hidden;
-  width: 172px;
-}
-
-.profile-photo img {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
-.text-content {
-  flex: 1;
-}
-
-.profile-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-top: 0.95rem;
-}
-
-.profile-icons a {
-  align-items: center;
-  background: color-mix(in srgb, var(--surface-solid) 82%, transparent);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  color: var(--text);
+.theme-toggle {
   display: inline-flex;
-  font-size: 1.18rem;
-  height: 38px;
+  align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-  width: 38px;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-left: auto;
+  padding: 0;
+  color: var(--text);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.profile-icons a:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
+.theme-toggle:hover {
+  background: var(--surface);
+  border-color: var(--muted);
 }
 
-.highlights-grid {
-  display: grid;
-  gap: 0.8rem;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
+/* Driven by the theme attribute rather than JS, so the right icon is painted
+   on the first frame. The `hidden` attribute is not reliable on inline SVG. */
+
+.icon-sun {
+  display: none;
 }
 
-.highlight-card {
-  background: color-mix(in srgb, var(--surface-solid) 76%, transparent);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 0.95rem 1rem;
+[data-theme="dark"] .icon-sun {
+  display: block;
 }
 
-.highlight-card h3 {
-  font-size: 1rem;
+[data-theme="dark"] .icon-moon {
+  display: none;
 }
 
-.highlight-card p {
-  color: var(--muted);
-  font-size: 0.94rem;
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.column h1 {
+  font-size: 1.9rem;
+  margin: 0 0 1.5rem;
+}
+
+.column h2 {
+  font-size: 1.35rem;
+  margin: 3rem 0 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.column h3 {
+  font-size: 1.08rem;
   margin: 0;
 }
 
-.item {
-  border-left: 3px solid color-mix(in srgb, var(--primary) 70%, transparent);
-  margin-bottom: 1.2rem;
-  padding-left: 0.8rem;
+.column p {
+  margin: 0 0 1.15rem;
 }
 
-.accordion {
-  margin: 0.75rem 0;
-}
-
-.accordion-btn {
-  align-items: center;
-  background: color-mix(in srgb, var(--surface-solid) 74%, transparent);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  color: var(--text);
-  cursor: pointer;
-  display: flex;
-  font-size: 1rem;
-  font-weight: 700;
-  gap: 0.45rem;
-  padding: 0.8rem 0.9rem;
-  text-align: left;
-  width: 100%;
-}
-
-.accordion-btn:hover {
-  border-color: color-mix(in srgb, var(--primary) 70%, white);
-}
-
-.accordion-btn .arrow {
-  transition: transform 0.2s ease;
-}
-
-.accordion.active .accordion-btn .arrow {
-  transform: rotate(180deg);
-}
-
-.accordion-content {
+.lead-in {
   color: var(--muted);
-  max-height: 0;
+  font-size: 0.95rem;
+  margin-top: -0.75rem;
+}
+
+/* --- Metadata: the one place the mono face appears. --- */
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-variant-numeric: normal;
+}
+
+/* ==========================================================================
+   Entries — shared by publications, projects, education, experience
+   ========================================================================== */
+
+.entry {
+  margin-bottom: 2.25rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+.entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.entry-head .meta {
+  flex-shrink: 0;
+}
+
+/* Publication and project titles sit directly on the entry, with no date
+   column beside them, so they need their own breathing room. */
+.entry > h3 {
+  margin-bottom: 0.35rem;
+}
+
+.entry-sub {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.entry p {
+  margin: 0 0 0.75rem;
+}
+
+.entry ul {
+  margin: 0.5rem 0 0.75rem;
+  padding-left: 1.15rem;
+}
+
+.entry li {
+  margin-bottom: 0.35rem;
+}
+
+.entry li::marker {
+  color: var(--muted);
+}
+
+.figure {
+  margin: 0 0 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
   overflow: hidden;
-  padding: 0 0.5rem;
-  transition: max-height 0.32s ease, padding-top 0.32s ease;
+  background: var(--surface);
 }
 
-.accordion.active .accordion-content {
-  max-height: 1000px;
-  padding-top: 0.72rem;
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.publication-list {
+.authors {
+  margin: 0 0 0.35rem;
+  font-size: 0.97rem;
+}
+
+.venue {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+/* --- Link buttons --- */
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.85rem 0 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  color: var(--text);
+  border-color: var(--muted);
+  text-decoration: none;
+}
+
+.button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-left: 0.45rem;
+  border-left: 1px solid var(--rule);
+}
+
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
+.contact-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.publication-item {
-  border-left: 3px solid color-mix(in srgb, var(--primary) 65%, transparent);
-  margin-bottom: 1rem;
-  padding-left: 0.75rem;
-}
-
-.publication-content {
+.contact-list li {
+  display: flex;
   align-items: flex-start;
-  display: flex;
-  gap: 0.9rem;
+  gap: 0.7rem;
+  margin-bottom: 0.6rem;
 }
 
-.publication-thumbnail {
-  background: color-mix(in srgb, var(--surface-solid) 74%, transparent);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  flex: 0 0 280px;
-  overflow: hidden;
-}
-
-.publication-thumbnail img {
-  display: block;
-  height: auto;
-  width: 100%;
-}
-
-.publication-details {
-  flex: 1;
-}
-
-.publication-title {
-  font-size: 1.02rem;
-}
-
-.publication-authors {
+.contact-list svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 0.25rem;
   color: var(--muted);
-  font-size: 0.9rem;
-  margin-bottom: 0.55rem;
 }
 
-.publication-eprint {
-  color: var(--muted);
-  font-size: 0.88rem;
-  margin: 0 0 0.5rem;
-}
+/* ==========================================================================
+   Course and award lists
+   ========================================================================== */
 
-.project-summary {
-  color: var(--muted);
-  margin-top: 0;
-}
-
-.link-button {
-  align-items: center;
-  background: color-mix(in srgb, var(--surface-solid) 82%, transparent);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  color: var(--text);
-  display: inline-flex;
-  font-size: 0.9rem;
-  font-weight: 700;
-  gap: 0.4rem;
-  padding: 0.43rem 0.75rem;
-}
-
-.link-icon {
-  display: inline-flex;
-  font-size: 1.15rem;
-}
-
-.link-button:hover {
-  border-color: color-mix(in srgb, var(--accent) 70%, white);
-}
-
-.star-span {
-  align-items: center;
-  display: inline-flex;
-  gap: 0.32rem;
-  margin-left: 0.2rem;
-}
-
-.accordion.highlight .accordion-btn {
-  background: color-mix(in srgb, var(--accent) 8%, var(--surface-solid) 70%);
-  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
-}
-
-.highlight-card {
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.highlight-card:hover {
-  border-color: color-mix(in srgb, var(--primary) 45%, transparent);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transform: translateY(-3px);
-}
-
-.publication-item {
-  transition: border-color 0.2s ease;
-}
-
-.publication-item:hover {
-  border-color: var(--primary);
-}
-
-.publication-venue {
-  background: color-mix(in srgb, var(--primary) 14%, transparent);
-  border: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
-  border-radius: 6px;
-  color: var(--primary);
-  display: inline-block;
-  font-size: 0.82rem;
-  font-weight: 700;
-  margin-bottom: 0.45rem;
-  padding: 0.2rem 0.6rem;
-}
-
-.publication-abstract {
-  border-left: 2px solid color-mix(in srgb, var(--primary) 30%, transparent);
-  color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.55;
-  margin: 0.45rem 0 0.7rem;
-  padding-left: 0.7rem;
-}
-
-.skills-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.skills-category h3 {
-  font-size: 0.92rem;
-  margin: 0 0 0.5rem;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.42rem;
-}
-
-.skill-tag {
-  background: color-mix(in srgb, var(--surface-solid) 82%, transparent);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  color: var(--text);
-  font-size: 0.86rem;
-  padding: 0.28rem 0.72rem;
-  transition: border-color 0.2s ease, transform 0.15s ease;
-}
-
-.skill-tag:hover {
-  border-color: color-mix(in srgb, var(--primary) 55%, transparent);
-  transform: translateY(-1px);
-}
-
-.award-item {
-  border-left: 3px solid color-mix(in srgb, var(--accent) 55%, transparent);
-  margin-bottom: 0.8rem;
-  padding: 0.35rem 0 0.35rem 0.8rem;
-}
-
-.award-item p {
-  margin: 0;
-}
-
-.course-list {
+.course-list,
+.award-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .course-list li {
-  border-bottom: 1px dashed var(--border);
   display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 0.4rem;
-  padding-bottom: 0.4rem;
+  gap: 0.15rem 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule);
 }
 
-.course-term {
+.course-list li:last-child {
+  border-bottom: 0;
+}
+
+.course-list .meta {
+  flex-shrink: 0;
+}
+
+.award-list li {
+  margin-bottom: 0.85rem;
+}
+
+/* ==========================================================================
+   Skills
+   ========================================================================== */
+
+.skill-group {
+  margin-bottom: 1.4rem;
+}
+
+.skill-group h3 {
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  padding: 0.15rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
   color: var(--muted);
-  margin-left: 0.8rem;
-  white-space: nowrap;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
 }
 
-.cert-gallery {
-  display: grid;
-  gap: 0.7rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  margin-top: 0.5rem;
-}
-
-.cert-gallery figure {
-  background: color-mix(in srgb, var(--surface-solid) 82%, transparent);
-  border: 1px dashed var(--border);
-  border-radius: 10px;
-  margin: 0;
-  overflow: hidden;
-  padding: 0.5rem;
-}
-
-.cert-gallery img {
-  border-radius: 8px;
-  display: block;
-  height: 148px;
-  object-fit: cover;
-  width: 100%;
-}
-
-.cert-gallery figcaption {
-  color: var(--muted);
-  font-size: 0.86rem;
-  margin-top: 0.38rem;
-  text-align: center;
-}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 footer {
-  border-top: 1px solid var(--border);
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
   color: var(--muted);
-  margin-top: 1rem;
-  padding: 1rem 0;
-  text-align: center;
+  font-size: 0.85rem;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+footer p {
+  margin: 0 0 0.35rem;
 }
 
-.reveal.in-view {
-  opacity: 1;
-  transform: none;
-}
+/* ==========================================================================
+   Motion
+   ========================================================================== */
 
-@media (max-width: 980px) {
-  .nav-inner {
-    flex-wrap: wrap;
-    justify-content: space-between;
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
+}
 
-  .nav-toggle {
-    display: inline-block;
-    margin-left: auto;
-  }
-
+@media print {
+  .hero,
+  .bar,
   .theme-toggle {
-    margin-left: 0.45rem;
-  }
-
-  .nav-links {
-    display: none;
-    flex-basis: 100%;
-    flex-direction: column;
-    overflow: visible;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-underline {
     display: none;
   }
 
-  .highlights-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px) {
-  .section-content,
-  .publication-content {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .publication-thumbnail {
-    flex: 0 0 auto;
-    max-width: 380px;
-    width: 100%;
-  }
-
-  .course-list li {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .course-term {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 520px) {
-  .container {
-    padding: 0.4rem 0.72rem 1.4rem;
-  }
-
-  section {
-    border-radius: 14px;
-    padding: 1rem 0.85rem;
-  }
-
-  .profile-photo {
-    height: 140px;
-    width: 140px;
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
   }
 }
