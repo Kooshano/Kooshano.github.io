@@ -37,11 +37,24 @@ paint so there is no flash of the wrong one.
 
 ## Images
 
-Display assets are WebP, resized to the size they actually render at. The originals
-are kept in `static/` alongside them. To regenerate after replacing an original:
+`static/` holds only what the two pages actually reference: WebP images resized to the
+size they render at, the favicon, a JPEG for link previews, and the CV PDF. Full-size
+originals are deliberately not kept here, since GitHub Pages serves everything in the
+repository.
+
+To add an image, resize it on the way in:
 
 ```sh
-cwebp -q 82 -resize 1200 0 static/Novelty.png -o static/novelty.webp
+cwebp -q 82 -resize 1200 0 ~/somewhere/figure.png -o static/figure.webp
+```
+
+Earlier originals (the paper figures, certificates and draw.io logo exports) were
+removed in the commit that trimmed `static/` from 17 MB to 448 KB. They are still in
+git history, so any one of them can be recovered:
+
+```sh
+git log --oneline --diff-filter=D -- static/    # find the commit
+git show <commit>^:static/Novelty.png > Novelty.png
 ```
 
 ## Local preview
