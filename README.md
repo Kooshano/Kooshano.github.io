@@ -1,7 +1,7 @@
 # kooshan.info
 
 Personal site for Kooshan Maleki. Plain static HTML, CSS and JavaScript served by
-GitHub Pages — no build step, no framework, no dependencies to install.
+GitHub Pages. No build step, no framework, no dependencies to install.
 
 ## Layout
 
@@ -26,12 +26,12 @@ paint so there is no flash of the wrong one.
 
 ## Editing
 
-- **Bio prose** — the paragraphs under "Hello 👋" in `index.html`. The last one is a
-  placeholder and is meant to be rewritten.
-- **CV content** — `cv/index.html`, one `<section>` per heading, flat and fully
+- **Bio prose**: the paragraphs under "Hello 👋" in `index.html`. An HTML comment
+  marks where a paragraph about life outside research would go.
+- **CV content**: `cv/index.html`, one `<section>` per heading, flat and fully
   expanded so the page can be read straight through or printed.
-- **Publications** — the `.entry` block appears on both pages; keep them in sync.
-- **Star counts** — any link with `data-repo="owner/name"` gets its GitHub star count
+- **Publications**: the `.entry` block appears on both pages; keep them in sync.
+- **Star counts**: any link with `data-repo="owner/name"` gets its GitHub star count
   filled in at load. If the API is rate-limited the counter is removed rather than
   showing an error.
 
