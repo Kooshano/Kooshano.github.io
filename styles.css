@@ -42,9 +42,6 @@ html {
 
 body {
   margin: 0;
-  /* The publication figures break out past the column, so keep any sub-pixel
-     overhang from producing a horizontal scrollbar. */
-  overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-serif);
@@ -111,7 +108,9 @@ a:focus-visible {
 
 .hero {
   position: relative;
-  min-height: 520px;
+  /* Tall enough that the enlarged photo, name and icon row never collide with
+     the scroll chevron on a short viewport. */
+  min-height: 680px;
   height: 100svh;
   display: flex;
   flex-direction: column;
@@ -146,27 +145,28 @@ a:focus-visible {
 }
 
 .hero-photo {
-  width: 190px;
-  height: 190px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 @media (max-width: 34rem) {
   .hero-photo {
-    width: 128px;
-    height: 128px;
+    width: 170px;
+    height: 170px;
+    margin-bottom: 1.5rem;
   }
 }
 
 .hero-name {
   margin: 0;
   font-weight: 600;
-  font-size: clamp(2rem, 7vw, 2.9rem);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+  font-size: clamp(2.4rem, 8vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .hero-role,
@@ -177,27 +177,32 @@ a:focus-visible {
 }
 
 .hero-role {
-  font-size: clamp(1rem, 3.6vw, 1.15rem);
+  font-size: clamp(1.15rem, 4vw, 1.5rem);
 }
 
 .hero-place {
-  font-size: clamp(0.9rem, 3.2vw, 1rem);
+  font-size: clamp(1rem, 3.4vw, 1.2rem);
 }
 
 .hero-icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.35rem;
-  margin-top: 1.5rem;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.hero-icons svg {
+  width: 30px;
+  height: 30px;
 }
 
 .icon-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3rem;
+  height: 3rem;
   color: var(--hero-text);
   text-decoration: none;
   border-radius: 50%;
@@ -285,10 +290,17 @@ a:focus-visible {
 }
 
 .hero-logo {
-  height: 42px;
+  height: 58px;
   width: auto;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
   opacity: 0.9;
+}
+
+@media (max-width: 34rem) {
+  .hero-logo {
+    height: 44px;
+    margin-bottom: 1.25rem;
+  }
 }
 
 .theme-toggle {
@@ -446,20 +458,21 @@ h3 {
   color: var(--muted);
 }
 
-/* Figures break out of the text column to 80% of the viewport, centred, so the
-   detail in a paper figure is actually readable. On narrow screens the column
-   is already wider than 80vw, so they stay full-column instead of shrinking. */
+/* Figures sit inside the text column and stop short of it, so the measure
+   stays the widest thing on the page. */
 .figure {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max(100%, 80vw);
-  max-width: 1200px;
-  margin: 0 0 1.5rem;
+  width: 80%;
+  margin: 0 auto 1.5rem;
   border: 1px solid var(--rule);
   border-radius: 3px;
   overflow: hidden;
   background: var(--surface);
+}
+
+@media (max-width: 34rem) {
+  .figure {
+    width: 100%;
+  }
 }
 
 .figure img {
