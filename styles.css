@@ -13,7 +13,10 @@
   --bg: #ffffff;
   --text: #1a1b1d;
   --muted: #6b6e73;
+  /* Hairline separators sit below the 3:1 boundary contrast a control needs,
+     which is why interactive borders use their own token. */
   --rule: #e4e5e7;
+  --control-border: #929499;
   --surface: #fafafa;
 
   /* The hero stays dark in both themes. */
@@ -27,6 +30,7 @@
   --text: #e6e7e9;
   --muted: #9a9da3;
   --rule: #2a2c30;
+  --control-border: #606267;
   --surface: #1a1c1f;
 }
 
@@ -45,7 +49,9 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-serif);
-  font-size: 21px;
+  /* rem, not px, so the reader's browser font-size setting actually applies.
+     Every other size in this file is rem too, so the whole scale moves with it. */
+  font-size: 1.3125rem;
   line-height: 1.6;
   font-variant-numeric: oldstyle-nums proportional-nums;
   -webkit-font-smoothing: antialiased;
@@ -54,7 +60,7 @@ body {
 
 @media (max-width: 34rem) {
   body {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 
@@ -86,6 +92,12 @@ a:focus-visible {
   border-radius: 2px;
 }
 
+/* The hero is dark in both themes, so the page's ring colour would sit at
+   1.1:1 against it. Use the hero's own foreground instead. */
+.hero :focus-visible {
+  outline-color: var(--hero-text);
+}
+
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -109,8 +121,9 @@ a:focus-visible {
 .hero {
   position: relative;
   /* Tall enough that the enlarged photo, name and icon row never collide with
-     the scroll chevron on a short viewport. */
-  min-height: 680px;
+     the scroll chevron, but never taller than the screen, which would push the
+     chevron below the fold on a phone in landscape. */
+  min-height: min(680px, 100svh);
   height: 100svh;
   display: flex;
   flex-direction: column;
@@ -307,13 +320,13 @@ a:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
   margin-left: auto;
   padding: 0;
   color: var(--text);
   background: none;
-  border: 1px solid var(--rule);
+  border: 1px solid var(--control-border);
   border-radius: 50%;
   cursor: pointer;
   transition: border-color 0.15s ease, background-color 0.15s ease;
@@ -378,7 +391,7 @@ h3 {
 
 .meta {
   font-family: var(--font-mono);
-  font-size: 0.76rem;
+  font-size: 0.9rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--muted);
@@ -479,6 +492,17 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
+  transition: opacity 0.15s ease;
+}
+
+/* Paper figures have white backgrounds, which glare against a dark page.
+   Take the edge off, and restore it on hover for a proper look. */
+[data-theme="dark"] .figure img {
+  opacity: 0.88;
+}
+
+[data-theme="dark"] .figure:hover img {
+  opacity: 1;
 }
 
 .authors {
@@ -504,14 +528,14 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.3rem 0.7rem;
+  padding: 0.35rem 0.75rem;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.85rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--muted);
-  border: 1px solid var(--rule);
+  border: 1px solid var(--control-border);
   border-radius: 999px;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
@@ -533,7 +557,13 @@ h3 {
   align-items: center;
   gap: 0.25rem;
   padding-left: 0.45rem;
-  border-left: 1px solid var(--rule);
+  border-left: 1px solid var(--control-border);
+}
+
+/* Reserve the digits so the pill does not grow when the count arrives. */
+.stars-count {
+  display: inline-block;
+  min-width: 1.5ch;
 }
 
 /* ==========================================================================
@@ -613,9 +643,9 @@ h3 {
 }
 
 .tag {
-  padding: 0.15rem 0.6rem;
+  padding: 0.2rem 0.65rem;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
+  font-size: 0.85rem;
   color: var(--muted);
   border: 1px solid var(--rule);
   border-radius: 999px;
